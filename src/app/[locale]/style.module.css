@@ -1,0 +1,115 @@
+.containerLogin {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.mainPage {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  color: var(--text);
+}
+
+.layout {
+  padding-top: 0px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.containerImage {
+  width: 50%;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.containerText {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+}
+
+.par {
+  margin-top: 1rem /* 16px */;
+  margin-bottom: 1rem /* 16px */;
+  font-size: 1rem /* 16px */;
+  line-height: 1.5rem /* 24px */;
+  font-weight: 50%;
+}
+
+.animatedText {
+  font-size: 3.75rem /* 60px */ !important;
+  line-height: 1 !important;
+  text-align: left !important;
+}
+
+/* xl */
+@media screen and (max-width: 1270px) {
+  .animatedText {
+    font-size: 3rem /* 48px */ !important;
+    line-height: 1 !important;
+  }
+}
+
+/* lg */
+@media screen and (max-width: 1023px) {
+  .animatedText {
+    text-align: center !important;
+    font-size: 3.75rem/* 60px */ !important;
+    line-height: 1 !important;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .containerText {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* md */
+@media screen and (max-width: 767px) {
+  .animatedText {
+    font-size: 3rem/* 48px */ !important;
+    line-height: 1 !important;
+  }
+  .containerImage {
+    width: 100%;
+  }
+  .image {
+    width: 100%;
+    display: inline-block;
+  }
+  .par {
+    font-size: 0.875rem /* 14px */;
+    line-height: 1.25rem /* 20px */;
+    background-color: var(--primary);
+  }
+}
+
+/* sm */
+@media screen and (max-width: 639px) {
+  .animatedText {
+    font-size: 1.875rem/* 30px */ !important;
+    line-height: 2.25rem/* 36px */ !important;
+  }
+  .par {
+    font-size: 0.75rem /* 12px */;
+    line-height: 1rem;
+    background-color: var(--primary);
+  }
+}
+
+/* xs */
+@media screen and (max-width: 479px) {
+}
