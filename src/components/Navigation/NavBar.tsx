@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 import styles from "./style.module.css";
-import ThemeSwitcherSelect from "../ThemeSwitcher/ThemeSwitcher";
+import CustomLink from "./NavigationLink/CustomLink";
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,6 +34,14 @@ function NavBar() {
         ${isOpen ? styles.span3ButtonOpen : styles.span3ButtonNoOpen}`}
         ></span>
       </button>
+
+      <div className={styles.containetNav}>
+        {/* Navigation xd */}
+        <nav>
+          <CustomLink href="/" title="Home" />
+          <CustomLink href="/about" title="About" />
+        </nav>
+      </div>
 
       {/* Menu Mobile */}
       {isOpen ? <div>Hola</div> : null}

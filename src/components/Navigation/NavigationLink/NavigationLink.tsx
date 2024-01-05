@@ -17,7 +17,6 @@ export default function NavigationLink<Pathname extends AppPathnames>({
 
   return (
     <Link
-      className={styles.link}
       aria-current={isActive ? "page" : undefined}
       href={href}
       {...rest}

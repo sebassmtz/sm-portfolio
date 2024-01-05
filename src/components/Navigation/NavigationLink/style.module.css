@@ -1,0 +1,32 @@
+.navLink{
+  position: relative;
+  text-decoration: none;
+  color: var(--text);
+}
+
+
+
+.spanLink{
+  height: 2.5px;
+  display: inline-block;
+  width: 0px;
+  background-color: var(--background-secondary);
+  position: absolute;
+  left: 0px;
+  bottom: -2px;
+  transition-property: width;
+  transition-timing-function: ease;
+  transition-duration: 300ms;
+}
+
+.spanLink:hover{
+  width: 100%;
+}
+
+.w_100{
+  width: 100%;
+}
+
+.w_0{
+  width: 0px;
+}
