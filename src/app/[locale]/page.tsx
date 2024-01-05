@@ -14,7 +14,7 @@ import AnimatedText from "@/subComponents/AnimatedText/AnimatedText";
 
 import Link from "next/link";
 
-import { LinkArrow } from "@/subComponents/Icons/Icons";
+import { LinkArrow, YinYang } from "@/subComponents/Icons/Icons";
 
 import HireMe from "@/subComponents/HireMe/HireMe";
 
@@ -41,6 +41,8 @@ export default function IndexPage({ params: { locale } }: Props) {
               className={styles.image}
               priority
               src={profilePic}
+              width={580}
+              height={500}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
               alt="Picture of the portfolio developer"
             />
@@ -62,9 +64,7 @@ export default function IndexPage({ params: { locale } }: Props) {
                 className={styles.resumeLink}
               >
                 Resume
-                <LinkArrow
-                  className={styles.arrow}
-                />
+                <LinkArrow className={styles.arrow} />
               </Link>
               <Link
                 href="https://www.linkedin.com/in/sebas-martinez01/"
@@ -77,9 +77,12 @@ export default function IndexPage({ params: { locale } }: Props) {
           </div>
         </div>
       </PageLayout>
-      <HireMe/>
-      <div>
-       {/* YIN YAN */}
+      <HireMe />
+      <div className={styles.yinYan}>
+        {/* YIN YAN */}
+        <div >
+          <YinYang className={styles.moveYin} />
+        </div>
       </div>
     </main>
   );

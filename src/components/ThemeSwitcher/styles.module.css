@@ -5,6 +5,8 @@
   border-radius: 9999px;
   padding: 0.25rem/* 4px */;
   border: none;
+  margin: 4px;
+  cursor: pointer;
 }
 
 .buttonDark{

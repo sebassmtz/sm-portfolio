@@ -1,73 +1,11 @@
 .header {
-  width: 100%;
-  padding-left: 8rem /* 128px */;
-  padding-right: 8rem /* 128px */;
-  padding-top: 2rem /* 32px */;
-  padding-bottom: 2rem /* 32px */;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  z-index: 10;
-  color: var(--text);
-}
+display: flex;
+align-items: center;
+justify-content: space-between;
+width: 100%;
+padding-top: 2rem/* 32px */;
+padding-bottom: 2rem/* 32px */;
 
-.buttonMobile {
-  background-color: var(--background);
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  display: none;
-  border: none;
-  cursor: pointer;
-}
-
-.spanButton {
-  background-color: var(--background-secondary);
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-  border-radius: 0.125rem /* 2px */;
-  display: block;
-  height: 0.125rem /* 2px */;
-  width: 1.5rem /* 24px */;
-}
-
-.span1ButtonOpen {
-  transform: rotate(45deg) translateY(0.25rem);
-}
-
-.span1ButtonNoOpen {
-  transform: translateY(-0.125rem);
-}
-
-.span2ButtonOpen {
-  opacity: 0;
-}
-
-.span2ButtonNoOpen {
-  opacity: 1;
-}
-
-.span3ButtonOpen {
-  transform: rotate(-45deg) translateY(-0.25rem);
-}
-
-.span3ButtonNoOpen {
-  transform: translateY(0.125rem);
-}
-
-.margin {
-  margin-top: 0.125rem /* 2px */;
-  margin-bottom: 0.125rem /* 2px */;
-}
-
-.containetNav{
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
 }
 
 /* xl */
@@ -79,12 +17,6 @@
   .header {
     padding-left: 4rem /* 64px */;
     padding-right: 4rem /* 64px */;
-  }
-  .buttonMobile {
-    display: flex;
-  }
-  .containetNav{
-    display: none;
   }
 }
 

@@ -5,6 +5,7 @@ import styles from "./style.module.css";
 import CustomLink from "../NavigationLink/CustomLink";
 
 import dynamic from 'next/dynamic'
+import SocialIcons from "@/subComponents/SocialIcons/SocialIcons";
 
 // Only loads ThemeSwitcher client-side
 const ThemeSwitcher = dynamic(
@@ -43,6 +44,7 @@ export default function Navigation() {
         <ThemeSwitcher />
         <LocaleSwitcher />
       </nav>
+      <SocialIcons/>
     </div>
   );
 }

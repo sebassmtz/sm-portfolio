@@ -27,7 +27,7 @@
 }
 
 .image {
-  width: 100%;
+  width: 90%;
   height: auto;
 }
 
@@ -40,7 +40,7 @@
 }
 
 .par {
-  margin-top: 1rem /* 16px */;
+  margin-top: 4px /* 16px */;
   margin-bottom: 1rem /* 16px */;
   font-size: 1rem /* 16px */;
   line-height: 1.5rem /* 24px */;
@@ -50,7 +50,9 @@
 .animatedText {
   font-size: 3.75rem /* 60px */ !important;
   line-height: 1 !important;
+  margin-bottom: 1rem /* 16px */;
   text-align: left !important;
+  margin-top: 4px; /* Ajusta el espacio encima del texto animado */
 }
 
 .contacts {
@@ -82,7 +84,7 @@
   border-color: var(--background-secondary);
 }
 
-.arrow{
+.arrow {
   width: 100%;
   height: auto;
   font-size: 1em;
@@ -94,16 +96,44 @@
 
 .contactLink {
   margin-left: 16px;
-  font-size: 1.125rem/* 18px */;
-  line-height: 1.75rem/* 28px */;
+  font-size: 1.125rem /* 18px */;
+  line-height: 1.75rem /* 28px */;
   font-weight: 500;
   text-transform: capitalize;
   color: var(--text);
-  text-decoration-line:  underline;
+  text-decoration-line: underline;
 }
 
-.contactLink:hover{
+.contactLink:hover {
   color: var(--primary);
+}
+
+.yinYan {
+  position: absolute;
+  display: inline-block;
+  width: 6rem;
+  right: 2rem;
+  bottom: 2rem;
+  transform: translate(-50%, -50%);
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.moveYin {
+  width: 100%;
+  height: auto;
+  animation: rotate infinite 1.5s linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* xl */
@@ -116,6 +146,9 @@
 
 /* lg */
 @media screen and (max-width: 1023px) {
+  .yinYan {
+    display: none;
+  }
   .contacts {
     align-self: center;
   }
@@ -135,14 +168,15 @@
 
 /* md */
 @media screen and (max-width: 767px) {
-
+  .yinYan {
+ display: none;
+  }
   .resumeLink {
     padding: 8px;
     padding-left: 1rem /* 16px */;
     padding-right: 1rem /* 16px */;
     font-size: 1rem /* 16px */;
     line-height: 1.5rem /* 24px */;
-    color: aqua;
   }
   .animatedText {
     font-size: 3rem /* 48px */ !important;

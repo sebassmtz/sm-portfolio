@@ -45,8 +45,7 @@ export default async function LocaleLayout({
       <body>
         <main className={styles.mainContainer}>
           <Providers>
-            {/* <NavBar/> */}
-            <Navigation />
+            <NavBar/>
             {children}
           </Providers>
         </main>

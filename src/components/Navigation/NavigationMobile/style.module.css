@@ -1,0 +1,94 @@
+.buttonMobile {
+  background-color: var(--background);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  border: none;
+  cursor: pointer;
+}
+
+.spanButton {
+  background-color: var(--background-secondary);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  border-radius: 0.125rem /* 2px */;
+  display: block;
+  height: 0.125rem /* 2px */;
+  width: 1.5rem /* 24px */;
+}
+
+.span1ButtonOpen {
+  transform: rotate(45deg) translateY(0.25rem);
+}
+
+.span1ButtonNoOpen {
+  transform: translateY(-0.125rem);
+}
+
+.span2ButtonOpen {
+  opacity: 0;
+}
+
+.span2ButtonNoOpen {
+  opacity: 1;
+}
+
+.span3ButtonOpen {
+  transform: rotate(-45deg) translateY(-0.25rem);
+}
+
+.span3ButtonNoOpen {
+  transform: translateY(0.125rem);
+}
+
+.margin {
+  margin-top: 0.125rem /* 2px */;
+  margin-bottom: 0.125rem /* 2px */;
+}
+
+.containetNav{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* xl */
+@media screen and (max-width: 1270px) {
+}
+
+/* lg */
+@media screen and (max-width: 1023px) {
+  .header {
+    padding-left: 4rem /* 64px */;
+    padding-right: 4rem /* 64px */;
+  }
+  .buttonMobile {
+    display: flex;
+  }
+  .containetNav{
+    display: none;
+  }
+}
+
+/* md */
+@media screen and (max-width: 767px) {
+  .header {
+    padding-left: 3rem /* 48px */;
+    padding-right: 3rem /* 48px */;
+  }
+}
+
+/* sm */
+@media screen and (max-width: 639px) {
+  .header {
+    padding-left: 2rem /* 32px */;
+    padding-right: 2rem /* 32px */;
+  }
+}
+
+/* xs */
+@media screen and (max-width: 479px) {
+}

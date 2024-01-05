@@ -45,8 +45,8 @@
 @media screen and (max-width: 479px) {
 }
 
-/* Importa la fuente */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;525;800&display=swap');
 
 /* Establece Montserrat como la fuente predeterminada */
 

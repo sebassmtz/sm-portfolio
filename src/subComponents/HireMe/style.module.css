@@ -1,6 +1,7 @@
 .container {
   position: fixed;
-  left: 16px;
+  left: 2rem;
+  bottom:  2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,6 +56,18 @@
   background-color: var(--background);
   color: var(--text);
   border-color: var(--background-secondary);
+}
+
+
+/* lg */
+@media screen and (max-width: 1023px) {
+  .container {
+    right: 32px;
+    left: auto;
+    top: 0;
+    bottom: auto;
+    position: absolute;
+  }
 }
 
 /* md */
