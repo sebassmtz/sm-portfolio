@@ -14,7 +14,8 @@ import AnimatedText from "@/subComponents/AnimatedText/AnimatedText";
 
 import Link from "next/link";
 
-import { BsBoxArrowUpRight } from "react-icons/bs";
+import { LinkArrow } from "@/subComponents/Icons/Icons";
+
 import HireMe from "@/subComponents/HireMe/HireMe";
 
 type Props = {
@@ -61,7 +62,7 @@ export default function IndexPage({ params: { locale } }: Props) {
                 className={styles.resumeLink}
               >
                 Resume
-                <BsBoxArrowUpRight
+                <LinkArrow
                   className={styles.arrow}
                 />
               </Link>

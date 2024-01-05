@@ -5,6 +5,7 @@ import { locales } from "../../i18n-config";
 import "../globals.css";
 
 import Providers from "./Providers";
+import NavBar from "@/components/Navigation/NavBar";
 import Navigation from "@/components/Navigation/Navigation";
 
 import styles from "./style.module.css";
@@ -44,7 +45,7 @@ export default async function LocaleLayout({
       <body>
         <main className={styles.mainContainer}>
           <Providers>
-            <Navigation />
+            <NavBar/>
             {children}
             <Footer />
           </Providers>

@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import NavigationLink from "./NavigationLink";
+import NavigationLink from "./NavigationLink/NavigationLink";
 
 import LocaleSwitcher from "../LocaleSwitcher/LocaleSwitcher";
 import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher";
@@ -17,7 +17,7 @@ export default function Navigation() {
           <NavigationLink href="/contact">Contacto</NavigationLink>
           <NavigationLink href="/about">About</NavigationLink>
         </div>
-        <div >
+        <div>
           <LocaleSwitcher />
           <ThemeSwitcher />
         </div>

@@ -4,6 +4,8 @@ import { useEffect, ReactNode } from "react";
 
 import styles from "./styles.module.css";
 
+import { SunIcon, MoonIcon } from "@/subComponents/Icons/Icons";
+
 type Props = {
   children: ReactNode;
   defaultValue: string;
@@ -27,15 +29,19 @@ export default function ThemeSwitcherSelect() {
   }, [setTheme]);
 
   return (
-    <label className={styles.label}>
-      <select
-        className={styles.customInput}
-        value={resolvedTheme}
-        onChange={(e) => setTheme(e.target.value)}
-      >
-        <option value="dark">Dark</option>
-        <option value="light">Light</option>
-      </select>
-    </label>
+    <button
+      aria-label="Toggle Dark Mode"
+      type="button"
+      className={`${styles.button}
+        ${resolvedTheme === "dark" ? styles.buttonDark : styles.buttonLight}
+      `}
+      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+    >
+      {resolvedTheme === "dark" ? (
+        <MoonIcon className={`${styles.icon} ${styles.iconFill}`} />
+      ) : (
+        <SunIcon className={`${styles.icon} ${styles.iconFill}`} />
+      )}
+    </button>
   );
 }
