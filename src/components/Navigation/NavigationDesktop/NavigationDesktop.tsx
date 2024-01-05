@@ -1,9 +1,16 @@
 import { useTranslations } from "next-intl";
 import LocaleSwitcher from "../../LocaleSwitcher/LocaleSwitcher";
-import ThemeSwitcher from "../../ThemeSwitcher/ThemeSwitcher";
 
 import styles from "./style.module.css";
 import CustomLink from "../NavigationLink/CustomLink";
+
+import dynamic from 'next/dynamic'
+
+// Only loads ThemeSwitcher client-side
+const ThemeSwitcher = dynamic(
+  () => import('@/components/ThemeSwitcher/ThemeSwitcher'),
+  { ssr: false }
+)
 
 export default function Navigation() {
   const t = useTranslations("Navigation");

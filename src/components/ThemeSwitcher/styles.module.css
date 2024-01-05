@@ -23,5 +23,5 @@
 .iconFill{
   width: 24px;
   height: 24px;
-  fill: var(--background-secondary);
+  fill: var(--background);
 }

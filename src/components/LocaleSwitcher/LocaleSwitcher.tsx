@@ -21,9 +21,24 @@ export default function LocaleSwitcher() {
   return (
     <button
       aria-label="Toggle Locale"
+      className={styles.button}
       onClick={handleClick}
     >
-      {locale === "en" ? <div>EN</div> : <div>ES</div>}
+      {locale === "en" ? (
+        <Image
+          src={ImageEs}
+          alt="ES"
+          width={24}
+          height={24}
+        />
+      ) : (
+        <Image
+          src={ImageEn}
+          alt="EN"
+          width={24}
+          height={24}
+        />
+      )}
     </button>
   );
 }

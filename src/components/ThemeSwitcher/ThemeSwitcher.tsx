@@ -3,7 +3,6 @@ import { useTheme } from "next-themes";
 import { useEffect, ReactNode, useState } from "react";
 
 import styles from "./styles.module.css";
-
 import { SunIcon, MoonIcon } from "@/subComponents/Icons/Icons";
 
 type Props = {
@@ -36,7 +35,7 @@ export default function ThemeSwitcherSelect() {
         }
       }
     }
-  }, [mounted,setTheme]);
+  }, [mounted, setTheme]);
 
   const toggleTheme = () => {
     const newTheme = isDarkTheme ? "light" : "dark";
@@ -57,12 +56,10 @@ export default function ThemeSwitcherSelect() {
       `}
       onClick={toggleTheme}
     >
-      {isDarkTheme  ? (
-        "Moon"
-        // <MoonIcon className={`${styles.icon} ${styles.iconFill}`} />
+      {isDarkTheme ? (
+        <MoonIcon className={`${styles.icon} ${styles.iconFill}`} />
       ) : (
-        "Sun"
-        // <SunIcon className={`${styles.icon} ${styles.iconFill}`} />
+        <SunIcon className={`${styles.icon} ${styles.iconFill}`} />
       )}
     </button>
   );
