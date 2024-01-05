@@ -30,8 +30,10 @@
     "locale": "{locale, select, es {Espanol} en {Ingles} other {Unknown}}"
   },
   "Navigation": {
-    "home": "Casa",
-    "path": "Ruta"
+    "home": "Inicio",
+    "about": "Sobre Mi",
+    "projects": "Proyectos",
+    "contact": "Contacto"
   },
   "Error": {
     "title": "¡Algo salió mal!",

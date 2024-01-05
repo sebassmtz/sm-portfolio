@@ -3,7 +3,8 @@
 import { useState } from "react";
 
 import styles from "./style.module.css";
-import CustomLink from "./NavigationLink/CustomLink";
+
+import Navigation from "./NavigationDesktop/NavigationDesktop";
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,8 +12,6 @@ function NavBar() {
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
-
-  console.log(isOpen);
 
   return (
     <header className={styles.header}>
@@ -35,13 +34,8 @@ function NavBar() {
         ></span>
       </button>
 
-      <div className={styles.containetNav}>
-        {/* Navigation xd */}
-        <nav>
-          <CustomLink href="/" title="Home" />
-          <CustomLink href="/about" title="About" />
-        </nav>
-      </div>
+      {/*Desktop  */}
+      <Navigation />
 
       {/* Menu Mobile */}
       {isOpen ? <div>Hola</div> : null}

@@ -1,6 +1,6 @@
 "use client";
 import { useTheme } from "next-themes";
-import { useEffect, ReactNode } from "react";
+import { useEffect, ReactNode, useState } from "react";
 
 import styles from "./styles.module.css";
 
@@ -14,19 +14,39 @@ type Props = {
 
 export default function ThemeSwitcherSelect() {
   const { resolvedTheme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  const [isDarkTheme, setIsDarkTheme] = useState(resolvedTheme === "dark");
 
   useEffect(() => {
-    const isDarkMode = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches;
+    setMounted(true); // Mounted
+  }, []);
 
-    if (
-      typeof window !== "undefined" &&
-      localStorage.getItem("theme") === "system"
-    ) {
-      setTheme(isDarkMode ? "dark" : "light");
+  useEffect(() => {
+    if (mounted) {
+      {
+        const isDarkMode = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+
+        if (
+          typeof window !== "undefined" &&
+          localStorage.getItem("theme") === "system"
+        ) {
+          setTheme(isDarkMode ? "dark" : "light");
+        }
+      }
     }
-  }, [setTheme]);
+  }, [mounted,setTheme]);
+
+  const toggleTheme = () => {
+    const newTheme = isDarkTheme ? "light" : "dark";
+    setIsDarkTheme(!isDarkTheme);
+    setTheme(newTheme);
+  };
+
+  useEffect(() => {
+    setIsDarkTheme(resolvedTheme === "dark");
+  }, [resolvedTheme]);
 
   return (
     <button
@@ -35,12 +55,14 @@ export default function ThemeSwitcherSelect() {
       className={`${styles.button}
         ${resolvedTheme === "dark" ? styles.buttonDark : styles.buttonLight}
       `}
-      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+      onClick={toggleTheme}
     >
-      {resolvedTheme === "dark" ? (
-        <MoonIcon className={`${styles.icon} ${styles.iconFill}`} />
+      {isDarkTheme  ? (
+        "Moon"
+        // <MoonIcon className={`${styles.icon} ${styles.iconFill}`} />
       ) : (
-        <SunIcon className={`${styles.icon} ${styles.iconFill}`} />
+        "Sun"
+        // <SunIcon className={`${styles.icon} ${styles.iconFill}`} />
       )}
     </button>
   );

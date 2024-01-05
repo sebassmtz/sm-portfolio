@@ -1,18 +1,29 @@
-import { useLocale, useTranslations } from "next-intl";
-import { locales } from "../../i18n-config";
-import LocaleSwitcherSelect from "./LocaleSwitcherSelect";
+"use client";
+import { useLocale } from "next-intl";
+
+import { useRouter, usePathname } from "../../i18n-navigation";
+
+import styles from "./styles.module.css";
+
+import Image from "next/image";
+
+import ImageEs from "../../../public/Icons/es.png";
+import ImageEn from "../../../public/Icons/en.png";
 
 export default function LocaleSwitcher() {
-  const t = useTranslations("LocaleSwitcher");
+  const router = useRouter();
   const locale = useLocale();
+  const pathname = usePathname();
+  const handleClick = () => {
+    router.replace(pathname, { locale: locale === "en" ? "es" : "en" });
+  };
 
   return (
-    <LocaleSwitcherSelect defaultValue={locale} label={t("label")}>
-      {locales.map((cur) => (
-        <option key={cur} value={cur}>
-          {t("locale", { locale: cur })}
-        </option>
-      ))}
-    </LocaleSwitcherSelect>
+    <button
+      aria-label="Toggle Locale"
+      onClick={handleClick}
+    >
+      {locale === "en" ? <div>EN</div> : <div>ES</div>}
+    </button>
   );
 }

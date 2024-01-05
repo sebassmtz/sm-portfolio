@@ -1,3 +1,4 @@
+"use client"
 import NavigationLink from "./NavigationLink";
 import styles from "./style.module.css";
 
@@ -5,7 +6,7 @@ import { useSelectedLayoutSegment } from "next/navigation";
 
 type Props = {
   // Agregar las demas URLS
-  href: "/" | "/contact" | "/about";
+  href: "/" | "/contact" | "/about" | "/projects" ;
   title: string;
   className?: string;
 };
@@ -17,7 +18,7 @@ function CustomLink({ href, title, className = "" }: Props) {
   return (
     <NavigationLink
       href={href}
-      className={` ${styles.navLink}${className}`}
+      className={`${styles.navLink} ${className}`}
     >
       {title}
       <span className={`${styles.spanLink}

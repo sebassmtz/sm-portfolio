@@ -1,0 +1,33 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.margin_right {
+  margin-right: 1rem /* 16px */;
+}
+
+.margin_center {
+  margin-left: 1rem /* 16px */;
+  margin-right: 1rem /* 16px */;
+}
+
+.margin_left {
+  margin-left: 1rem; /* 16px */
+}
+
+.switcher{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* lg */
+@media screen and (max-width: 1023px) {
+  .container {
+    display: none;
+  }
+}

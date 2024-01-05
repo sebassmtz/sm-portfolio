@@ -31,7 +31,9 @@
   },
   "Navigation": {
     "home": "Home",
-    "path": "Path"
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
   },
   "Error": {
     "title": "Something went wrong!",

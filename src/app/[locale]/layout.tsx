@@ -6,7 +6,7 @@ import "../globals.css";
 
 import Providers from "./Providers";
 import NavBar from "@/components/Navigation/NavBar";
-import Navigation from "@/components/Navigation/Navigation";
+import Navigation from "@/components/Navigation/NavigationDesktop/NavigationDesktop";
 
 import styles from "./style.module.css";
 import Footer from "@/components/Footer/Footer";
@@ -45,9 +45,9 @@ export default async function LocaleLayout({
       <body>
         <main className={styles.mainContainer}>
           <Providers>
-            <NavBar/>
+            {/* <NavBar/> */}
+            <Navigation />
             {children}
-            <Footer />
           </Providers>
         </main>
       </body>
