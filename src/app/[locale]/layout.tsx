@@ -8,6 +8,7 @@ import Providers from "./Providers";
 import Navigation from "@/components/Navigation/Navigation";
 
 import styles from "./style.module.css";
+import Footer from "@/components/Footer/Footer";
 
 type Props = {
   children: ReactNode;
@@ -39,13 +40,15 @@ export default async function LocaleLayout({
   unstable_setRequestLocale(locale);
 
   return (
-    <html lang={locale}
-    >
-      <body className={styles.containerLogin}>
-        <Providers>
-          <Navigation />
-          {children}
-        </Providers>
+    <html lang={locale}>
+      <body>
+        <main className={styles.mainContainer}>
+          <Providers>
+            <Navigation />
+            {children}
+            <Footer />
+          </Providers>
+        </main>
       </body>
     </html>
   );

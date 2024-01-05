@@ -1,0 +1,77 @@
+.container {
+  position: fixed;
+  left: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hireMe {
+  width: 12rem;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.circularText {
+  width: 100%;
+  height: auto;
+  fill: var(--background-secondary);
+  animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.linkHireMe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+  color: var(--text-secondary);
+  background-color: var(--background-secondary);
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--background-secondary);
+  width: 80px;
+  height: 80px;
+  border-radius: 9999px;
+  font-weight: 600;
+  box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0px 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.linkHireMe:hover {
+  background-color: var(--background);
+  color: var(--text);
+  border-color: var(--background-secondary);
+}
+
+/* md */
+@media screen and (max-width: 767px) {
+  .container {
+    right: 32px;
+    left: auto;
+    top: 0;
+    bottom: auto;
+    position: absolute;
+  }
+  .hireMe {
+    width: 6rem;
+  }
+  .linkHireMe {
+    width: 48px;
+    height: 48px;
+    font-size: 10px;
+  }
+}

@@ -14,7 +14,8 @@ export default function Navigation() {
       <nav className={styles.navigation}>
         <div>
           <NavigationLink href="/">{t("home")}</NavigationLink>
-          <NavigationLink href="/path">{t("path")}</NavigationLink>
+          <NavigationLink href="/contact">Contacto</NavigationLink>
+          <NavigationLink href="/about">About</NavigationLink>
         </div>
         <div >
           <LocaleSwitcher />

@@ -1,0 +1,23 @@
+import Link from "next/link"
+
+import { CircularText } from "../Icons/Icons"
+
+import styles from "./style.module.css"
+function HireMe() {
+  return (
+    <div  className={styles.container}>
+      <div className={styles.hireMe}>
+        <CircularText
+        className={styles.circularText}
+        />
+        <Link
+        className={styles.linkHireMe}
+        href={"https://www.linkedin.com/in/sebas-martinez01/"}
+        >
+          Hire Me
+        </Link>
+      </div>
+    </div>
+  )
+}
+export default HireMe
