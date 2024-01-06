@@ -6,6 +6,7 @@ import CustomLink from "../NavigationLink/CustomLink";
 
 import dynamic from 'next/dynamic'
 import SocialIcons from "@/subComponents/SocialIcons/SocialIcons";
+import SoundBar from "@/subComponents/SoundBar/SoundBar";
 
 // Only loads ThemeSwitcher client-side
 const ThemeSwitcher = dynamic(
@@ -41,6 +42,7 @@ export default function Navigation() {
       </nav>
 
       <nav className={styles.switcher}>
+        <SoundBar/>
         <ThemeSwitcher />
         <LocaleSwitcher />
       </nav>

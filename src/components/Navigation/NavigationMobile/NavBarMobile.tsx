@@ -15,6 +15,7 @@ import {
 import LocaleSwitcher from "@/components/LocaleSwitcher/LocaleSwitcher";
 import ThemeSwitcher from "@/components/ThemeSwitcher/ThemeSwitcher";
 import CustomMobileLink from "../NavigationLink/CustomMobileLink";
+import SoundBar from "@/subComponents/SoundBar/SoundBar";
 
 const MotionLink = motion(Link);
 
@@ -107,8 +108,9 @@ function NavBarMobile(props: Props) {
             </MotionLink>
           </nav>
           <nav className={styles.navSwitcher}>
-            <LocaleSwitcher />
+          <SoundBar/>
             <ThemeSwitcher />
+            <LocaleSwitcher />
           </nav>
         </motion.div>
       ) : null}
