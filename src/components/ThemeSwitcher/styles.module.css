@@ -10,22 +10,9 @@
 }
 
 .buttonDark{
-  background-color: var(--background);
+  background-color: var(--background-secondary);
 }
 
 .buttonLight{
   background-color: var(--background);
-}
-
-.icons{
-  width: 100%;
-  height: auto;
-  width: 24px;
-  height: 24px;
-
-}
-
-.iconFill{
-
-  fill: var(--background);
 }

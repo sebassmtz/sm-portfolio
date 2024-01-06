@@ -17,6 +17,9 @@ function CustomMobileLink({ href, title, className = "" }: Props) {
 
   return (
     <NavigationLink
+    onClick={() => {
+      console.log("click");
+    }}
       href={href}
       className={`${styles.navLinkMobile} ${className}`}
     >

@@ -1,0 +1,4 @@
+.iconFill {
+  fill: var(--background-secondary);
+  color: var(--text);
+}
