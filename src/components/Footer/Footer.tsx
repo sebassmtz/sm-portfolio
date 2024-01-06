@@ -5,7 +5,7 @@ import styles from "./style.module.css";
 function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className={styles.layout}>
+      <PageLayout className={styles.layout}>
         <span>{new Date().getFullYear()} &copy; All rights reserved.</span>
         <div className={styles.container}>
           Built with
@@ -24,7 +24,7 @@ function Footer() {
         >
           Coming Soon
         </Link>
-      </div>
+      </PageLayout>
     </footer>
   );
 }

@@ -4,8 +4,10 @@
   justify-content: center;
   border-radius: 9999px;
   padding: 0.25rem/* 4px */;
-  border: none;
   background-color: transparent;
-  margin: 4px;
+  border-color: var(--background-secondary);
+  border-width: 1px;
+  border-style: solid;
   cursor: pointer;
+  margin-left: 1rem;
 }

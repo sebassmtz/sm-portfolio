@@ -21,7 +21,7 @@ export default function LocaleSwitcher() {
   return (
     <button
       aria-label="Toggle Locale"
-      className={styles.button}
+      className={`${styles.button} `}
       onClick={handleClick}
     >
       {locale === "en" ? (

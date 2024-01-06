@@ -17,6 +17,7 @@ import Link from "next/link";
 import { LinkArrow, YinYang } from "@/subComponents/Icons/Icons";
 
 import HireMe from "@/subComponents/HireMe/HireMe";
+import Footer from "@/components/Footer/Footer";
 
 type Props = {
   params: { locale: string };
@@ -80,7 +81,7 @@ export default function IndexPage({ params: { locale } }: Props) {
       <HireMe />
       <div className={styles.yinYan}>
         {/* YIN YAN */}
-        <div >
+        <div>
           <YinYang className={styles.moveYin} />
         </div>
       </div>

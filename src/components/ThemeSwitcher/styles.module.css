@@ -4,8 +4,10 @@
   justify-content: center;
   border-radius: 9999px;
   padding: 0.25rem/* 4px */;
-  border: none;
-  margin: 4px;
+  margin-right: 4px;
+  border-color: var(--background-secondary);
+  border-width: 1px;
+  border-style: solid;
   cursor: pointer;
 }
 
@@ -20,10 +22,12 @@
 .icons{
   width: 100%;
   height: auto;
+  width: 24px;
+  height: 24px;
+
 }
 
 .iconFill{
-  width: 24px;
-  height: 24px;
+
   fill: var(--background);
 }

@@ -1,11 +1,17 @@
 .header {
-display: flex;
-align-items: center;
-justify-content: space-between;
-width: 100%;
-padding-top: 2rem/* 32px */;
-padding-bottom: 2rem/* 32px */;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 2rem /* 32px */;
+  padding-bottom: 2rem /* 32px */;
+}
 
+.divLogo {
+  position: absolute;
+  left: 50%;
+  top: 0.5rem;
+  transform: translateX(-50%);
 }
 
 /* xl */

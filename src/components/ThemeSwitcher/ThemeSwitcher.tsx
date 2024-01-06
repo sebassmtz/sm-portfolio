@@ -57,9 +57,9 @@ export default function ThemeSwitcherSelect() {
       onClick={toggleTheme}
     >
       {isDarkTheme ? (
-        <MoonIcon className={`${styles.icon} ${styles.iconFill}`} />
+        <MoonIcon className={`${styles.icon}`} />
       ) : (
-        <SunIcon className={`${styles.icon} ${styles.iconFill}`} />
+        <SunIcon className={`${styles.icon}`} />
       )}
     </button>
   );

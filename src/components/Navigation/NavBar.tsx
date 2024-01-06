@@ -3,6 +3,7 @@ import styles from "./style.module.css";
 import Navigation from "./NavigationDesktop/NavigationDesktop";
 
 import NavBarMobile from "./NavigationMobile/NavBarMobile";
+import Logo from "@/subComponents/Logo/Logo";
 
 function NavBar() {
 
@@ -15,8 +16,8 @@ function NavBar() {
       <Navigation />
 
       {/* Logo */}
-        <div>
-
+        <div className={styles.divLogo}>
+          <Logo/>
         </div>
     </header>
   );

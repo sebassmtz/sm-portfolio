@@ -1,0 +1,30 @@
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.logo{
+  background-color: var(--background-secondary);
+  color: var(--text-secondary);
+  border-color: var(--background-secondary);
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  font-size: 1.5rem/* 24px */;
+  line-height: 2rem/* 32px */;
+  font-weight: 700;
+  border-width: 1px;
+  border-style: solid;
+  text-decoration: none;
+}
+
+.logo:hover{
+  background-color: var(--background);
+  color: var(--text);
+  border-color: var(--background-secondary);
+}
