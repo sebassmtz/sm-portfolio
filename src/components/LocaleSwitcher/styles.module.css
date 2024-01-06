@@ -5,9 +5,7 @@
   border-radius: 9999px;
   padding: 0.25rem/* 4px */;
   background-color: transparent;
-  border-color: var(--background-secondary);
-  border-width: 1px;
-  border-style: solid;
+  border: none;
   cursor: pointer;
   margin-left: 1rem;
 }

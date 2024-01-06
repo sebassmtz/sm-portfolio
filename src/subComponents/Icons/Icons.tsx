@@ -148,8 +148,8 @@ export const LinkArrow = ({ className, ...rest }: any) => (
 export const SunIcon = ({ className, ...rest }: any) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
+    width="32"
+    height="32"
     viewBox="0 0 24 24"
     {...rest}
     className={className}
@@ -351,8 +351,8 @@ export const SunIcon = ({ className, ...rest }: any) => (
 export const MoonIcon = ({ className, ...rest }: any) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
+    width="32"
+    height="32"
     viewBox="0 0 24 24"
     {...rest}
     className={className}

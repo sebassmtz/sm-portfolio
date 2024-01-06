@@ -5,10 +5,8 @@
   border-radius: 9999px;
   padding: 0.25rem/* 4px */;
   margin-right: 4px;
-  border-color: var(--background-secondary);
-  border-width: 1px;
-  border-style: solid;
   cursor: pointer;
+  border: none;
 }
 
 .buttonDark{

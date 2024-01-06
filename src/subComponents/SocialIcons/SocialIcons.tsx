@@ -49,30 +49,22 @@ function SocialIcons() {
     <div className={styles.container}>
       <SocialIcon href="https://github.com/sebassmtz/">
         <GithubIcon
-          width={50}
-          height={50}
           className={styles.icon}
         />
       </SocialIcon>
       <SocialIcon href="https://www.linkedin.com/in/sebas-martinez01/">
         <LinkedInIcon
-          width={50}
-          height={50}
           className={styles.icon}
           fill2={theme === "dark" ? "#fff" : "#fff"}
         />
       </SocialIcon>
-      <SocialIcon href="">
+      <SocialIcon href="https://twitter.com/sebassmtz01">
         <Twitter
-          width={50}
-          height={50}
           className={styles.icon}
         />
       </SocialIcon>
       <SocialIcon href="https://www.instagram.com/sebassmtz01/">
         <InstagramIcon
-          width={50}
-          height={50}
           className={styles.icon}
         />
       </SocialIcon>

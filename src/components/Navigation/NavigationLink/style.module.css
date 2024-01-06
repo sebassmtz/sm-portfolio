@@ -1,12 +1,18 @@
-.navLink{
+.navLink {
   position: relative;
   text-decoration: none;
   color: var(--text);
 }
 
+.navLinkMobile {
+  position: relative;
+  text-decoration: none;
+  color: var(--text-secondary);
+  margin-top: 0.5rem /* 8px */;
+  margin-bottom: 0.5rem /* 8px */;
+}
 
-
-.spanLink{
+.spanLink {
   height: 2.5px;
   display: inline-block;
   width: 0px;
@@ -19,14 +25,31 @@
   transition-duration: 300ms;
 }
 
-.spanLink:hover{
+.spanLinkMobile {
+  height: 2.5px;
+  display: inline-block;
+  width: 0px;
+  background-color: var(--background);
+  position: absolute;
+  left: 0px;
+  bottom: -2px;
+  transition-property: width;
+  transition-timing-function: ease;
+  transition-duration: 300ms;
+}
+
+.spanLinkMobile:hover {
   width: 100%;
 }
 
-.w_100{
+.spanLink:hover {
   width: 100%;
 }
 
-.w_0{
+.w_100 {
+  width: 100%;
+}
+
+.w_0 {
   width: 0px;
 }
