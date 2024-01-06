@@ -12,9 +12,5 @@ interface PageProps {
 }
 
 export default function Providers({ children }: PageProps) {
-  return (
-    <ThemeProvider>
-      <AnimatePresence mode="wait">{children}</AnimatePresence>
-    </ThemeProvider>
-  );
+  return <ThemeProvider>{children}</ThemeProvider>;
 }

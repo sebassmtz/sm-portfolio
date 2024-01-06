@@ -3,7 +3,7 @@ import { useTheme } from "next-themes";
 import { useEffect, ReactNode, useState } from "react";
 
 import styles from "./styles.module.css";
-import { SunIcon, MoonIcon } from "@/subComponents/Icons/Icons";
+import { SunIconImg, MoonIconImg } from "@/subComponents/Icons/Icons";
 
 type Props = {
   children: ReactNode;
@@ -57,9 +57,9 @@ export default function ThemeSwitcherSelect() {
       onClick={toggleTheme}
     >
       {isDarkTheme ? (
-        <MoonIcon className={`${styles.icon}`} />
+        <MoonIconImg />
       ) : (
-        <SunIcon className={`${styles.icon}`} />
+        <SunIconImg />
       )}
     </button>
   );
