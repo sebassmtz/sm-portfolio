@@ -5,13 +5,16 @@ import { ThemeProvider } from "next-themes";
 import PageLayout from "@/components/PageLayout/PageLayout";
 import Footer from "@/components/Footer/Footer";
 
+import { AnimatePresence } from "framer-motion";
+
 interface PageProps {
   children: ReactNode;
 }
 
 export default function Providers({ children }: PageProps) {
-
-  return <ThemeProvider>
-    {children}
-    </ThemeProvider>;
+  return (
+    <ThemeProvider>
+      <AnimatePresence mode="wait">{children}</AnimatePresence>
+    </ThemeProvider>
+  );
 }

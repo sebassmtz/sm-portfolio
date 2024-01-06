@@ -1,6 +1,10 @@
+import TransitionEffect from "@/components/TransitionEffect/TransitionEffect"
+
 function About() {
   return (
-    <div>About</div>
+    <div>
+      <TransitionEffect/>
+      About</div>
   )
 }
 export default About

@@ -18,6 +18,7 @@ import { LinkArrow, YinYang } from "@/subComponents/Icons/Icons";
 
 import HireMe from "@/subComponents/HireMe/HireMe";
 import Footer from "@/components/Footer/Footer";
+import TransitionEffect from "@/components/TransitionEffect/TransitionEffect";
 
 type Props = {
   params: { locale: string };
@@ -35,6 +36,7 @@ export default function IndexPage({ params: { locale } }: Props) {
 
   return (
     <main className={styles.mainPage}>
+      <TransitionEffect />
       <PageLayout className={styles.layout}>
         <div className={styles.container}>
           <div className={styles.containerImage}>

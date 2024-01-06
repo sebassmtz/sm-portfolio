@@ -1,0 +1,23 @@
+.main{
+  position:fixed;
+  top: 0px;
+  bottom: 0px;
+  right: 100%;
+  width: 100vw;
+  height: 100vw;
+}
+
+.main1{
+background-color: var(--primary);
+z-index: 30;
+}
+
+.main2{
+background-color: var(--background);
+z-index: 20;
+}
+
+.main3{
+background-color: var(--background-secondary);
+z-index: 10;
+}
