@@ -23,10 +23,10 @@ function NavBar() {
 
   return (
     <header className={styles.header}>
+      <Navigation />
       {/*Mobile */}
       <NavBarMobile {...data} />
       {/*Desktop  */}
-      <Navigation />
 
       {/* Logo */}
       <div className={styles.divLogo}>

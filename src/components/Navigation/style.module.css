@@ -2,16 +2,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: 80%;
+  height: auto;
   padding-top: 2rem /* 32px */;
   padding-bottom: 2rem /* 32px */;
+  padding-left: 8rem/* 128px */;
+  font-weight: 500;
+
 }
 
 .divLogo {
   position: absolute;
   left: 50%;
   top: 0.5rem;
-  transform: translateX(-50%);
+  transform: translate(-50, -50);
 }
 
 /* xl */
@@ -22,13 +26,14 @@
 @media screen and (max-width: 1023px) {
   .header {
     padding-left: 4rem /* 64px */;
-    padding-right: 4rem /* 64px */;
+    padding-right: 2rem /* 64px */;
   }
 }
 
 /* md */
 @media screen and (max-width: 767px) {
   .header {
+    width: 80%;
     padding-left: 3rem /* 48px */;
     padding-right: 3rem /* 48px */;
   }
@@ -37,6 +42,7 @@
 /* sm */
 @media screen and (max-width: 639px) {
   .header {
+    width: 80%;
     padding-left: 2rem /* 32px */;
     padding-right: 2rem /* 32px */;
   }

@@ -1,8 +1,6 @@
 .container {
   width: 100%;
   display: flex;
-  padding-left: 8rem/* 128px */;
-  padding-right: 8rem;
   justify-content: space-between;
   align-items: center;
 }

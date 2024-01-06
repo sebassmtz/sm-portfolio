@@ -31,7 +31,7 @@ function NavBarMobile(props: Props) {
     setIsOpen(!isOpen);
   };
   return (
-    <div>
+    <>
       {/* Button Mobile */}
       <button
         className={styles.buttonMobile}
@@ -114,7 +114,7 @@ function NavBarMobile(props: Props) {
           </nav>
         </motion.div>
       ) : null}
-    </div>
+    </>
   );
 }
 export default NavBarMobile;

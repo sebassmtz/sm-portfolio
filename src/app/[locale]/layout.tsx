@@ -41,14 +41,12 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body>
-        <main className={styles.mainContainer}>
-          <Providers>
-            <NavBar/>
-            {children}
-            {/* <Footer/> */}
-          </Providers>
-        </main>
+      <body className={styles.mainContainer}>
+        <Providers>
+          <NavBar />
+          {children}
+          {/* <Footer/> */}
+        </Providers>
       </body>
     </html>
   );
