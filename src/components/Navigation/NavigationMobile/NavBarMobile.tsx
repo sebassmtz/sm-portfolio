@@ -20,10 +20,15 @@ import { OpenContext } from "./OpenContext";
 
 const MotionLink = motion(Link);
 
-type Props = {
-  href: "/" | "/contact" | "/about" | "/projects";
+interface Link {
+  href: "/about" | "/projects" | "/contact" | "/";
   title: string;
-}[];
+}
+
+interface Props {
+  title: string;
+  data: Link[];
+}
 
 function NavBarMobile(props: Props) {
   const [isOpen, setIsOpen] = useState(false);
@@ -67,13 +72,15 @@ function NavBarMobile(props: Props) {
           {/* My navigation */}
           <OpenContext.Provider value={openContext}>
             <nav className={styles.navLink}>
-              {Object.values(props).map((item, index) => (
-                <CustomMobileLink
-                  key={index}
-                  href={item.href}
-                  title={item.title}
-                />
-              ))}
+              {
+                props.data.map((link, index) => (
+                  <CustomMobileLink
+                    key={index}
+                    href={link.href}
+                    title={link.title}
+                  />
+                ))
+              }
             </nav>
           </OpenContext.Provider>
 

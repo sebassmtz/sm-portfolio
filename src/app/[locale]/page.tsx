@@ -17,7 +17,6 @@ import Link from "next/link";
 import { LinkArrow, YinYang } from "@/subComponents/Icons/Icons";
 
 import HireMe from "@/subComponents/HireMe/HireMe";
-import Footer from "@/components/Footer/Footer";
 import TransitionEffect from "@/components/TransitionEffect/TransitionEffect";
 
 type Props = {
@@ -52,13 +51,11 @@ export default function IndexPage({ params: { locale } }: Props) {
           </div>
           <div className={styles.containerText}>
             <AnimatedText
-              text="Turning Vision Into Reality With Code And Design."
+              text={t("title")}
               className={styles.animatedText}
             />
             <p className={styles.par}>
-              As a skilled full-stack developer, I am dedicated to turning ideas
-              into innovative web applications. Explore my latest projects and
-              articles, showcasing my expertise in React.js and web development.
+              {t("description")}
             </p>
             <div className={styles.contacts}>
               <Link
@@ -66,7 +63,7 @@ export default function IndexPage({ params: { locale } }: Props) {
                 target={"_blank"}
                 className={styles.resumeLink}
               >
-                Resume
+                {t("resume")}
                 <LinkArrow className={styles.arrow} />
               </Link>
               <Link
@@ -74,13 +71,15 @@ export default function IndexPage({ params: { locale } }: Props) {
                 target={"_blank"}
                 className={styles.contactLink}
               >
-                Contact
+               {t("contact")}
               </Link>
             </div>
           </div>
         </div>
       </PageLayout>
-      <HireMe />
+      <HireMe 
+      title={t("hireMe")}
+      />
       <div className={styles.yinYan}>
         <YinYang className={styles.moveYin} />
       </div>

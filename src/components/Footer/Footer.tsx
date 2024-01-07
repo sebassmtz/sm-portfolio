@@ -1,16 +1,17 @@
-import PageLayout from "@/components/PageLayout/PageLayout";
 import Link from "next/link";
 import styles from "./style.module.css";
+import { useTranslations } from "next-intl";
 
 function Footer() {
+  const t = useTranslations("FooterPage");
   return (
     <footer className={styles.footer}>
       <div className={styles.layout}>
-        <span>{new Date().getFullYear()} &copy; All rights reserved.</span>
+        <span>{new Date().getFullYear()} &copy; {t('rights')}</span>
         <div className={styles.container}>
-          Built with
+          {t('madeWith')}
           <span className={styles.span}>&#9825;</span>
-          by&nbsp;
+          {t('by')}&nbsp;
           <Link href="https://github.com/sebassmtz"
           className={styles.link}
           >Sebassmtz</Link>
@@ -19,7 +20,7 @@ function Footer() {
           href="/"
           className={styles.link}
         >
-          Coming Soon
+          {t('brand')}
         </Link>
       </div>
     </footer>

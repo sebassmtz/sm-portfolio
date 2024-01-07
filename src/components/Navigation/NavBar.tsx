@@ -6,26 +6,34 @@ import NavBarMobile from "./NavigationMobile/NavBarMobile";
 import Logo from "@/subComponents/Logo/Logo";
 import { useTranslations } from "next-intl";
 
-type Props = {
-  href: "/" | "/contact" | "/about" | "/projects";
+interface Link {
+  href: "/about" | "/projects" | "/contact" | "/";
   title: string;
-}[];
+}
+
+interface Props {
+  title: string;
+  data: Link[];
+}
 
 function NavBar() {
   const t = useTranslations("Navigation");
 
-  const data: Props = [
-    { href: "/", title: `${t("home")}` },
-    { href: "/about", title: `${t("about")}` },
-    { href: "/projects", title: `${t("projects")}` },
-    { href: "/contact", title: `${t("contact")}` },
-  ];
+  const props: Props = {
+    title: "paths",
+    data: [
+      { href: "/", title: `${t("home")}` },
+      { href: "/about", title: `${t("about")}` },
+      { href: "/projects", title: `${t("projects")}` },
+      { href: "/contact", title: `${t("contact")}` },
+    ],
+  };
 
   return (
     <div className={styles.header}>
       <Navigation />
       {/*Mobile */}
-      <NavBarMobile {...data} />
+      <NavBarMobile {...props} />
       {/*Desktop  */}
 
       {/* Logo */}
