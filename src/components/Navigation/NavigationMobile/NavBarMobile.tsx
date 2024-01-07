@@ -72,15 +72,13 @@ function NavBarMobile(props: Props) {
           {/* My navigation */}
           <OpenContext.Provider value={openContext}>
             <nav className={styles.navLink}>
-              {
-                props.data.map((link, index) => (
-                  <CustomMobileLink
-                    key={index}
-                    href={link.href}
-                    title={link.title}
-                  />
-                ))
-              }
+              {props.data.map((link, index) => (
+                <CustomMobileLink
+                  key={index}
+                  href={link.href}
+                  title={link.title}
+                />
+              ))}
             </nav>
           </OpenContext.Provider>
 
@@ -88,7 +86,7 @@ function NavBarMobile(props: Props) {
           <nav className={styles.navSocial}>
             <MotionLink
               target={"_blank"}
-              href={""}
+              href={"https://github.com/sebassmtz/"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
               className={styles.link}
@@ -97,7 +95,7 @@ function NavBarMobile(props: Props) {
             </MotionLink>
             <MotionLink
               target={"_blank"}
-              href={""}
+              href={"https://www.linkedin.com/in/sebas-martinez01/"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
               className={styles.link}
@@ -106,7 +104,7 @@ function NavBarMobile(props: Props) {
             </MotionLink>
             <MotionLink
               target={"_blank"}
-              href={""}
+              href={"https://twitter.com/sebassmtz01"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
               className={styles.link}
@@ -115,7 +113,7 @@ function NavBarMobile(props: Props) {
             </MotionLink>
             <MotionLink
               target={"_blank"}
-              href={""}
+              href={"https://www.instagram.com/sebassmtz01/"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
               className={styles.link}

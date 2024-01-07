@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { locales } from "../../i18n-config";
 import PageLayout from "@/components/PageLayout/PageLayout";
@@ -31,6 +31,8 @@ export default function IndexPage({ params: { locale } }: Props) {
   // Enable static rendering
   unstable_setRequestLocale(locale);
 
+  const localeURL = useLocale();
+
   const t = useTranslations("IndexPage");
 
   return (
@@ -54,12 +56,15 @@ export default function IndexPage({ params: { locale } }: Props) {
               text={t("title")}
               className={styles.animatedText}
             />
-            <p className={styles.par}>
-              {t("description")}
-            </p>
+            <p className={styles.par}>{t("description")}</p>
             <div className={styles.contacts}>
               <Link
-                href=""
+                href={` ${
+                  localeURL === "en"
+                    ? "https://drive.google.com/file/d/1QWK0W86Q_c0bjYsTw5o-B-xZ9uso2fsS/view?usp=sharing"
+                    : "https://drive.google.com/file/d/1YQ0PmYkJXL_Kzn5rNEgF8ZduKbfJDUtO/view?usp=sharing"
+                }
+                  }`}
                 target={"_blank"}
                 className={styles.resumeLink}
               >
@@ -71,15 +76,13 @@ export default function IndexPage({ params: { locale } }: Props) {
                 target={"_blank"}
                 className={styles.contactLink}
               >
-               {t("contact")}
+                {t("contact")}
               </Link>
             </div>
           </div>
         </div>
       </PageLayout>
-      <HireMe 
-      title={t("hireMe")}
-      />
+      <HireMe title={t("hireMe")} />
       <div className={styles.yinYan}>
         <YinYang className={styles.moveYin} />
       </div>
