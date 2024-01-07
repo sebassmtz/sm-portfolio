@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import styles from "./style.module.css";
 
 import { motion } from "framer-motion";
@@ -16,6 +16,7 @@ import LocaleSwitcher from "@/components/LocaleSwitcher/LocaleSwitcher";
 import ThemeSwitcher from "@/components/ThemeSwitcher/ThemeSwitcher";
 import CustomMobileLink from "../NavigationLink/CustomMobileLink";
 import SoundBar from "@/subComponents/SoundBar/SoundBar";
+import { OpenContext } from "./OpenContext";
 
 const MotionLink = motion(Link);
 
@@ -26,6 +27,11 @@ type Props = {
 
 function NavBarMobile(props: Props) {
   const [isOpen, setIsOpen] = useState(false);
+
+  const openContext = useMemo(
+    () => ({ isOpen, setIsOpen }),
+    [isOpen, setIsOpen]
+  );
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -59,15 +65,18 @@ function NavBarMobile(props: Props) {
           animate={{ scale: 1, opacity: 1 }}
         >
           {/* My navigation */}
-          <nav className={styles.navLink}>
-            {Object.values(props).map((item, index) => (
-              <CustomMobileLink
-                key={index}
-                href={item.href}
-                title={item.title}
-              />
-            ))}
-          </nav>
+          <OpenContext.Provider value={openContext}>
+            <nav className={styles.navLink}>
+              {Object.values(props).map((item, index) => (
+                <CustomMobileLink
+                  key={index}
+                  href={item.href}
+                  title={item.title}
+                />
+              ))}
+            </nav>
+          </OpenContext.Provider>
+
           {/* Social Icons */}
           <nav className={styles.navSocial}>
             <MotionLink
@@ -108,7 +117,7 @@ function NavBarMobile(props: Props) {
             </MotionLink>
           </nav>
           <nav className={styles.navSwitcher}>
-          <SoundBar/>
+            <SoundBar />
             <ThemeSwitcher />
             <LocaleSwitcher />
           </nav>

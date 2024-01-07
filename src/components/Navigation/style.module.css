@@ -2,12 +2,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 80%;
+  width: auto;
   height: auto;
   padding-top: 2rem /* 32px */;
   padding-bottom: 2rem /* 32px */;
   padding-left: 8rem/* 128px */;
+  padding-right: 8rem/* 128px */;
   font-weight: 500;
+  font-size: 24px; /* 18px */
 
 }
 
@@ -20,10 +22,16 @@
 
 /* xl */
 @media screen and (max-width: 1270px) {
+  .divLogo {
+    left: 55%;
+  }
 }
 
 /* lg */
 @media screen and (max-width: 1023px) {
+  .divLogo {
+    left: 40%;
+  }
   .header {
     padding-left: 4rem /* 64px */;
     padding-right: 2rem /* 64px */;
@@ -33,7 +41,7 @@
 /* md */
 @media screen and (max-width: 767px) {
   .header {
-    width: 80%;
+    width: auto;
     padding-left: 3rem /* 48px */;
     padding-right: 3rem /* 48px */;
   }
@@ -41,8 +49,11 @@
 
 /* sm */
 @media screen and (max-width: 639px) {
+  .divLogo {
+    left: 40%;
+  }
   .header {
-    width: 80%;
+    width: auto;
     padding-left: 2rem /* 32px */;
     padding-right: 2rem /* 32px */;
   }

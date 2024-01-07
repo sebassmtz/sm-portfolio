@@ -45,7 +45,7 @@ export default async function LocaleLayout({
         <Providers>
           <NavBar />
           {children}
-          {/* <Footer/> */}
+          <Footer/>
         </Providers>
       </body>
     </html>

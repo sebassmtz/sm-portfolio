@@ -5,26 +5,23 @@ import styles from "./style.module.css";
 function Footer() {
   return (
     <footer className={styles.footer}>
-      <PageLayout className={styles.layout}>
+      <div className={styles.layout}>
         <span>{new Date().getFullYear()} &copy; All rights reserved.</span>
         <div className={styles.container}>
           Built with
           <span className={styles.span}>&#9825;</span>
           by&nbsp;
-          <Link
-            className={styles.link}
-            href="https://github.com/sebassmtz"
-          >
-            Sebassmtz
-          </Link>
+          <Link href="https://github.com/sebassmtz"
+          className={styles.link}
+          >Sebassmtz</Link>
         </div>
         <Link
-          href=""
+          href="/"
           className={styles.link}
         >
           Coming Soon
         </Link>
-      </PageLayout>
+      </div>
     </footer>
   );
 }

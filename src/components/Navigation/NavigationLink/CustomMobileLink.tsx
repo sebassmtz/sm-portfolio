@@ -2,6 +2,10 @@
 import NavigationLink from "./NavigationLink";
 import styles from "./style.module.css";
 
+import { useContext } from "react";
+
+import { OpenContext } from "../NavigationMobile/OpenContext";
+
 import { useSelectedLayoutSegment } from "next/navigation";
 
 type Props = {
@@ -15,11 +19,13 @@ function CustomMobileLink({ href, title, className = "" }: Props) {
   const selectedLayoutSegment = useSelectedLayoutSegment();
   const pathname = selectedLayoutSegment ? `/${selectedLayoutSegment}` : "/";
 
+  const { isOpen, setIsOpen } = useContext(OpenContext);
+
   return (
     <NavigationLink
-    onClick={() => {
-      console.log("click");
-    }}
+      onClick={() => {
+        setIsOpen(!isOpen);
+      }}
       href={href}
       className={`${styles.navLinkMobile} ${className}`}
     >

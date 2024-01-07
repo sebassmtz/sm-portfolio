@@ -22,7 +22,7 @@ function NavBar() {
   ];
 
   return (
-    <header className={styles.header}>
+    <div className={styles.header}>
       <Navigation />
       {/*Mobile */}
       <NavBarMobile {...data} />
@@ -32,7 +32,7 @@ function NavBar() {
       <div className={styles.divLogo}>
         <Logo />
       </div>
-    </header>
+    </div>
   );
 }
 export default NavBar;

@@ -1,16 +1,17 @@
 .footer {
   color: var(--text);
-  width: 100%;
-  border-style: solid;
-  border-top-width: 2px;
-  border-color: var(--background-secondary);
+  width: auto;
   font-weight: 500;
-  font-size: 1.125rem /* 18px */;
-  line-height: 1.75rem /* 28px */;
+  font-size: 24px; /* 18px */
+  line-height: 1.75rem; /* 28px */
+  border-top: 2px solid var(--background-secondary); /* Cambiado a un borde superior */
+  padding-top: 2rem; /* 32px */
 }
 
 .layout {
   display: flex;
+  padding-left: 4rem;
+  padding-right: 4rem;
   padding-top: 2rem /* 32px */;
   padding-bottom: 2rem /* 32px */;
   align-items: center;
@@ -43,11 +44,21 @@
 /* lg */
 @media screen and (max-width: 1023px) {
   .container {
-    flex-direction: column;
+    padding-top: 8px /* 24px */;
+    padding-bottom: 8px /* 24px */;
   }
   .layout {
     flex-direction: column;
     padding-top: 1.5rem /* 24px */;
     padding-bottom: 1.5rem /* 24px */;
+    font-size: 18px; /* 18px */
   }
+}
+
+/* sm */
+@media screen and (max-width: 639px) {
+}
+
+/* xs */
+@media screen and (max-width: 479px) {
 }

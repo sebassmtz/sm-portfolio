@@ -42,7 +42,7 @@
 .par {
   margin-top: 4px /* 16px */;
   margin-bottom: 1rem /* 16px */;
-  font-size: 1rem /* 16px */;
+  font-size: 22px; 
   line-height: 1.5rem /* 24px */;
   font-weight: 50%;
 }
@@ -60,6 +60,7 @@
   align-items: center;
   align-self: flex-start;
   margin-top: 8px;
+  font-size: 20px; 
 }
 
 .resumeLink {
@@ -139,6 +140,9 @@
     font-size: 3rem /* 48px */ !important;
     line-height: 1 !important;
   }
+  .yinYan {
+    left: 80%;
+  }
 }
 
 /* lg */
@@ -166,7 +170,7 @@
 /* md */
 @media screen and (max-width: 767px) {
   .yinYan {
- display: none;
+    display: none;
   }
   .resumeLink {
     padding: 8px;

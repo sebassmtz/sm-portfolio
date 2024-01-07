@@ -36,7 +36,7 @@ export default function IndexPage({ params: { locale } }: Props) {
 
   return (
     <main className={styles.mainPage}>
-      {/* <TransitionEffect /> */}
+      <TransitionEffect />
       <PageLayout className={styles.layout}>
         <div className={styles.container}>
           <div className={styles.containerImage}>
