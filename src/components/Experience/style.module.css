@@ -1,0 +1,84 @@
+.container {
+  margin-top: 8rem /* 256px */;
+  margin-bottom: 8rem /* 256px */;
+}
+
+.title {
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  color: var(--text);
+  font-size: 6rem /* 96px */;
+  line-height: 1;
+}
+
+.containerExperience{
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.lineMotion{
+  position:absolute;
+  left: 93px;
+  top: 9%;
+  width: 4px;
+  height: 115%;
+  background-color: var(--primary);
+  transform-origin: top;
+}
+
+/* xl */
+@media screen and (max-width: 1270px) {
+}
+
+/* lg */
+@media screen and (max-width: 1023px) {
+  .containerExperience{
+    width: 90%;
+  }
+  .lineMotion{
+    height: 100%;
+  }
+}
+
+/* md */
+@media screen and (max-width: 767px) {
+  .lineMotion{
+    width: 2px;
+    left: 25px;
+    top: 8%;
+  }
+  .containerExperience{
+    width: 100%;
+  }
+  .title {
+    margin-bottom: 4rem;
+    font-size: 3.75rem /* 60px */;
+    line-height: 1;
+  }
+}
+
+/* sm */
+@media screen and (max-width: 639px) {
+  .title {
+    font-size: 2.25rem /* 36px */;
+    line-height: 2.5rem /* 40px */;
+  }
+  .lineMotion{
+    width: 2px;
+    left: 20px;
+    height: 100%;
+  }
+}
+
+/* xs */
+@media screen and (max-width: 479px) {
+  .lineMotion{
+    width: 2px;
+    top: 35px;
+    left: 56px;
+    height: 100%;
+  }
+}
