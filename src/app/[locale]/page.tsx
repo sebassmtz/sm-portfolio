@@ -18,6 +18,7 @@ import { LinkArrow, YinYang } from "@/subComponents/Icons/Icons";
 
 import HireMe from "@/subComponents/HireMe/HireMe";
 import TransitionEffect from "@/components/TransitionEffect/TransitionEffect";
+import CustomLink from "@/components/Navigation/NavigationLink/CustomLink";
 
 type Props = {
   params: { locale: string };
@@ -71,13 +72,11 @@ export default function IndexPage({ params: { locale } }: Props) {
                 {t("resume")}
                 <LinkArrow className={styles.arrow} />
               </Link>
-              <Link
-                href="https://www.linkedin.com/in/sebas-martinez01/"
-                target={"_blank"}
+              <CustomLink
+                href="/contact"
+                title={t("contact")}
                 className={styles.contactLink}
-              >
-                {t("contact")}
-              </Link>
+              />
             </div>
           </div>
         </div>

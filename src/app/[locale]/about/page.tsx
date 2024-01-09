@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { useLocale, useTranslations } from "next-intl";
+import {  useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { locales } from "../../../i18n-config";
 
