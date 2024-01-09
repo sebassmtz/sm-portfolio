@@ -69,6 +69,7 @@
     line-height: 1 !important;
   }
   .pageContainer {
+    padding-bottom: 2rem;
     padding: 3rem;
   }
 }

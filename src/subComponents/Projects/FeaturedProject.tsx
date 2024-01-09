@@ -18,6 +18,7 @@ type Props = {
   type: string;
   summary: string;
   visit: string;
+  skills: string;
 };
 
 const FeaturedProject = ({
@@ -28,6 +29,7 @@ const FeaturedProject = ({
   type,
   summary,
   visit,
+  skills,
 }: Props) => {
   return (
     <div className={styles.col_span}>
@@ -62,6 +64,9 @@ const FeaturedProject = ({
             <h2 className={styles.title}>{title}</h2>
           </Link>
           <p className={styles.paragraph}>{summary}</p>
+          <span className={styles.skills}>
+            {skills}
+          </span>
           <div className={styles.containerLinks}>
             <Link
               className={styles.linkGithub}

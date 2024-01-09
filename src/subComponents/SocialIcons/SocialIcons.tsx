@@ -10,7 +10,6 @@ import {
   Twitter,
   LinkedInIcon,
 } from "@/subComponents/Icons/Icons";
-import React, { useEffect, useState } from "react";
 
 const SocialIcon = ({
   children,
@@ -31,20 +30,6 @@ const SocialIcon = ({
 };
 
 function SocialIcons() {
-  const [theme, setTheme] = useState("");
-
-  useEffect(() => {
-    const themeLoc = () => {
-      if (typeof window !== "undefined") {
-        setTheme(window.localStorage.getItem("theme") || "");
-      }
-    };
-
-    themeLoc(); // Llama a la función una vez
-
-    // Evita que se ejecute en cada renderizado
-  }, []);
-
   return (
     <div className={styles.container}>
       <SocialIcon href="https://github.com/sebassmtz/">
@@ -55,7 +40,6 @@ function SocialIcons() {
       <SocialIcon href="https://www.linkedin.com/in/sebas-martinez01/">
         <LinkedInIcon
           className={styles.icon}
-          fill2={theme === "dark" ? "#fff" : "#fff"}
         />
       </SocialIcon>
       <SocialIcon href="https://twitter.com/sebassmtz01">

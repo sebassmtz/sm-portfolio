@@ -11,8 +11,12 @@ import TransitionEffect from "@/components/TransitionEffect/TransitionEffect";
 
 import FeaturedProject from "@/subComponents/Projects/FeaturedProject";
 
+import Project from "@/subComponents/Projects/Projects";
+
 // Import Projects
-import project1 from "../../../../public/images/projects/crypto-screener-cover-image.jpg"
+import project1 from "../../../../public/images/projects/crypto-screener-cover-image.jpg";
+
+import ParticlesContainer from "@/components/ParticlesContainer/ParticlesContainer";
 
 type Props = {
   params: { locale: string };
@@ -28,6 +32,7 @@ function Projects({ params: { locale } }: Props) {
   return (
     <main className={styles.container}>
       <TransitionEffect />
+      <ParticlesContainer  moving={false}/>
       <div className={styles.pageContainer}>
         <AnimatedText
           className={styles.title}
@@ -45,6 +50,25 @@ function Projects({ params: { locale } }: Props) {
                 It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your
                 local currency."
             visit="Visitar Proyecto"
+            skills="React, Tailwind CSS, Context API, React Router and Recharts."
+          />
+          <Project
+            title="Crypto Screener Application"
+            img={project1}
+            link="https://portfolio-ten-umber.vercel.app/"
+            github="/"
+            type="Casttle Inventory App"
+            visit="Visitar Proyecto"
+            skills="React, Tailwind CSS, Context API, React Router and Recharts."
+          />
+          <Project
+            title="Crypto Screener Application"
+            img={project1}
+            link="https://portfolio-ten-umber.vercel.app/"
+            github="/"
+            type="Image IA"
+            visit="Visitar Proyecto"
+            skills="React, Tailwind CSS, Context API, React Router and Recharts."
           />
         </div>
       </div>
