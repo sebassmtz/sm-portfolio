@@ -15,7 +15,17 @@
     "contact": "Contact",
     "hireMe": "Hire Me"
   },
-  "FooterPage":{
+  "AboutPage": {
+    "title": "About Me",
+    "biography": "Biography",
+    "paragraph1": "I am a web developer and software designer located in Colombia. I am passionate about creating beautiful, functional and user-centric digital experiences. I am always looking for new and innovative ways to bring my clients' visions to life.",
+    "paragraph2": "I'm interested in the whole web development stack like trying new things and creating great projects. I am an independent and innovative professional. I love sports, gymnastics, anime and reading books.",
+    "paragraph3": "When I am working on a website or a digital project, I bring my commitment and use the best practices guaranteeing the user experience and a minimalist design. I believe that everything is an Art when you put your consciousness into it.",
+    "projects": "Projects Completed",
+    "clients": "Satisfied Clients",
+    "experience": "Years of Experience"
+  },
+  "FooterPage": {
     "rights": "All rights reserved.",
     "madeWith": " Built with",
     "by": "by",

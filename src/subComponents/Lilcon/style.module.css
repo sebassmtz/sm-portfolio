@@ -1,0 +1,61 @@
+.figure{
+  position:absolute;
+  left: 0;
+  stroke: var(--background-secondary);
+}
+
+.svg{
+  transform: translate(-90deg);
+}
+
+.circle1{
+  stroke-width: 1;
+  fill: none;
+  stroke: var(--primary);
+}
+
+.circle2{
+  stroke-width: 5px;
+  fill: var(--background);
+}
+
+.circle3{
+  /* Anime Poulse ? */
+  animation: pulse 2s infinite;
+  stroke-width: 1;
+  fill: var(--primary);
+}
+
+/* xl */
+@media screen and (max-width: 1270px) {
+}
+
+/* lg */
+@media screen and (max-width: 1023px) {
+}
+
+/* md */
+@media screen and (max-width: 767px) {
+  .figure{
+    left: -10%;
+  }
+  .svg{
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* sm */
+@media screen and (max-width: 639px) {
+  .svg{
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* xs */
+@media screen and (max-width: 479px) {
+  .figure{
+    left: -12px;
+  }
+}

@@ -15,7 +15,17 @@
     "contact": "Contacto",
     "hireMe": "Contrata"
   },
-  "FooterPage":{
+  "AboutPage": {
+    "title": "Sobre Mi",
+    "biography": "Biografía",
+    "paragraph1": "Soy un desarrollador web y diseñador software ubicado en Colombia. Estoy apasionado por crear experiencias digitales hermosas, funcionales y centradas en el usuario. Siempre estoy buscando formas nuevas e innovadoras de hacer realidad las visiones de mis clientes.",
+    "paragraph2": "Estoy interesado en todo el desarrollo web, como probar cosas nuevas y crear grandes proyectos. Soy un profesional independiente e innovador. Me encantan los deportes, la gimnasia, el anime y leer libros.",
+    "paragraph3": "Cuando estoy trabajando en un sitio web o un proyecto digital, aporto mi compromiso y utilizo las mejores practicas garantizando la experiencia de usuario y un diseño minimalista. Creo que todo es un Arte cuando pones tu consciencia en ello.",
+    "projects": "Proyectos completados",
+    "clients": "Clientes satisfechos",
+    "experience": "Años de experiencia"
+  },
+  "FooterPage": {
     "rights": "Todos los derechos reservados",
     "madeWith": "Hecho con",
     "by": "por",

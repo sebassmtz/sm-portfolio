@@ -55,10 +55,37 @@
   }
 }
 
+/* xl */
+@media screen and (max-width: 1270px) {
+  .layout {
+    padding: 6rem;
+  }
+}
+
+/* lg */
+@media screen and (max-width: 1023px) {
+  .layout {
+    padding: 4rem;
+  }
+}
+
+/* md */
+@media screen and (max-width: 767px) {
+  .layout {
+    padding: 3rem;
+  }
+}
+
 /* sm */
 @media screen and (max-width: 639px) {
+  .layout {
+    padding: 1rem;
+  }
 }
 
 /* xs */
 @media screen and (max-width: 479px) {
+  .layout {
+    padding: 1rem;
+  }
 }

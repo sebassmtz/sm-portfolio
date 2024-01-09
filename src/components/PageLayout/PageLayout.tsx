@@ -1,4 +1,5 @@
 import { ReactNode } from "react"
+
 import styles from './styles.module.css'
 
 type Props = {
@@ -9,7 +10,7 @@ type Props = {
 function PageLayout({ children, className="" }: Props) {
 
   return (
-    <div className={`${styles.pageContainer} ${className}`}>
+    <div className={`${className} ${styles.pageContainer}`}>
       {children}
     </div>
   );
