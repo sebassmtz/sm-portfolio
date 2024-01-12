@@ -19,6 +19,7 @@ import project2 from "../../../../public/images/projects/project2.png";
 import project3 from "../../../../public/images/projects/project3.png";
 
 import ParticlesContainer from "@/components/ParticlesContainer/ParticlesContainer";
+import MiniProject from "@/subComponents/Projects/MiniProject";
 
 type Props = {
   params: { locale: string };
@@ -74,11 +75,17 @@ function Projects({ params: { locale } }: Props) {
             skills={t("project_3_skills")}
           />
         </div>
-        <h2 className={styles.otherTitle}>
-          Other projects
-        </h2>
+        <h2 className={styles.otherTitle}>Other projects</h2>
         <div className={styles.containerOther}>
           {/* Other Articles */}
+          <MiniProject
+            title="Psico manages appointments with psychologists."
+            link="https://github.com/sebassmtz/psico-frontend"
+          />
+          <MiniProject
+            title="Microservices in java and python to manage voting"
+            link="https://github.com/sebassmtz/Votaciones-MisionTic2022"
+          />
         </div>
       </div>
     </main>
