@@ -1,5 +1,7 @@
+"use client";
 import { useRef } from "react";
 import LiIcon from "@/subComponents/Lilcon/LiIcon";
+import Link from "next/link";
 
 type DetailsProps = {
   position: string;
@@ -27,13 +29,13 @@ const DetailsExp = ({ position, company, companyLink, time, address, work }: Det
       >
         <h3 className={styles.title_h3}>
           {position}&nbsp;
-          <a
+          <Link
             href={companyLink}
             target={"_blank"}
             className={styles.link}
           >
             @{company}
-          </a>
+          </Link>
         </h3>
         <span className={styles.timeSpan}>
           {time} | {address}

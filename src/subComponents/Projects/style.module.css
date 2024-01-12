@@ -219,8 +219,8 @@
     padding-right: 1rem; /* 16px */
   }
   .paragraph {
-    font-size: 0.875rem /* 14px */;
-    line-height: 1.25rem /* 20px */;
+    font-size: 12px/* 14px */;
+    line-height: 15px /* 20px */;
   }
   .divAbsolute {
     height: 102%;

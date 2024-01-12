@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import {  useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { locales } from "../../../i18n-config";
 
@@ -13,8 +13,11 @@ import styles from "./style.module.css";
 
 import AnimatedNumber from "@/subComponents/AnimatedNumber/AnimatedNumber";
 
-import procfile from "../../../../public/images/profile/developer-pic-2.jpg";
+import procfile from "../../../../public/images/profile/profile.jpg";
 import Experience from "@/components/Experience/Experience";
+import Skills from "@/components/Skills/Skills";
+import Education from "@/components/Education/Education";
+
 
 const Awards = ({ number, text }: { number: number; text: string }) => {
   return (
@@ -45,6 +48,61 @@ function About({ params: { locale } }: Props) {
     { number: 10, text: `${t("projects")}` },
     { number: 7, text: `${t("clients")}` },
   ];
+  const propsSkills = {
+    title: `${t("skills")}`,
+    skillHeaders: [
+      `${t("backend")}`,
+      `${t("frontend")}`,
+      `${t("tools")}`,
+      `${t("others")}`,
+    ],
+  };
+
+  const education = {
+    title : `${t("education")}`,
+    details: [
+      {
+        title: `${t("education_1_title")}`,
+        place: `${t("education_1_place")}`,
+        time: `${t("education_1_time")}`,
+        info: `${t("education_1_info")}`,
+      },
+      {
+        title: `${t("education_2_title")}`,
+        place: `${t("education_2_place")}`,
+        time: `${t("education_2_time")}`,
+        info: `${t("education_2_info")}`,
+      },
+      {
+        title: `${t("education_3_title")}`,
+        place: `${t("education_3_place")}`,
+        time: `${t("education_3_time")}`,
+        info: `${t("education_3_info")}`,
+      },
+    ]
+  }
+
+  const experience = {
+    title : `${t("experience_title")}`,
+    details: [
+      {
+        position: `${t("experience_1_position")}`,
+        company: `${t("experience_1_company")}`,
+        time: `${t("experience_1_time")}`,
+        work: `${t("experience_1_work")}`,
+        companyLink:"https://www.freelancer.com.co/",
+        address:"Boyaca, Colombia"
+      },
+      {
+        position: `${t("experience_2_position")}`,
+        company: `${t("experience_2_company")}`,
+        time: `${t("experience_2_time")}`,
+        work: `${t("experience_2_work")}`,
+        companyLink:"https://www.freelancer.com.co/",
+        address:"Boyaca, Colombia"
+      },
+    ]
+  }
 
   return (
     <main className={styles.mainPage}>
@@ -84,7 +142,13 @@ function About({ params: { locale } }: Props) {
             ))}
           </div>
         </div>
-        <Experience />
+        <Skills {...propsSkills} />
+        <Experience 
+        {...experience}
+        />
+        <Education 
+        {...education}
+        />
       </PageLayout>
     </main>
   );

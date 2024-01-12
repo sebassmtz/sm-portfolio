@@ -17,9 +17,19 @@ type Props = {
   type: string;
   visit: string;
   skills: string;
+  summary?: string;
 };
 
-const Project = ({ title, img, link, github, type, visit, skills}: Props) => {
+const Project = ({
+  title,
+  img,
+  link,
+  github,
+  type,
+  visit,
+  skills,
+  summary,
+}: Props) => {
   return (
     <div className={styles.col_span_6}>
       <article className={`${styles.article} ${styles.flex}`}>
@@ -46,6 +56,7 @@ const Project = ({ title, img, link, github, type, visit, skills}: Props) => {
           >
             <h2 className={styles.title}>{title}</h2>
           </Link>
+          <p className={styles.paragraph}>{summary}</p>
           <span className={styles.skills}>{skills}</span>
           <div className={styles.containerLinksProject}>
             <Link

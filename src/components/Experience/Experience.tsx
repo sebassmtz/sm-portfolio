@@ -4,9 +4,23 @@ import { useRef } from "react";
 
 import styles from "./style.module.css";
 
-import DetailsEdu from "@/subComponents/Details/DetailsEdu";
+import DetailsExp from "@/subComponents/Details/DetailsExp";
 
-function Experience() {
+interface ExperienceItem {
+  position: string;
+  company: string;
+  time: string;
+  work: string;
+  companyLink: string;
+  address: string;
+}
+
+interface ExperienceData {
+  title: string;
+  details: ExperienceItem[];
+}
+
+function Experience({ title, details }: ExperienceData) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -15,7 +29,7 @@ function Experience() {
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>Experience</h2>
+      <h2 className={styles.title}>{title}</h2>
       <div className={styles.containerExperience}
       ref={ref}
       >
@@ -27,30 +41,19 @@ function Experience() {
         />
         <ul className={styles.listExperience}>
           {/* Experience */}
-          <DetailsEdu
-            position="Software Engineer"
-            company="Google"
-            companyLink="https://google.com"
-            time="2019 - Present"
-            address="Mountain View, CA"
-            work="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, voluptatum."
-          />
-          <DetailsEdu
-            position="Software Engineer"
-            company="Google"
-            companyLink="https://google.com"
-            time="2019 - Present"
-            address="Mountain View, CA"
-            work="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, voluptatum."
-          />
-          <DetailsEdu
-            position="Software Engineer"
-            company="Google"
-            companyLink="https://google.com"
-            time="2019 - Present"
-            address="Mountain View, CA"
-            work="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, voluptatum."
-          />
+          {
+            details.map((item, index) => (
+              <DetailsExp
+                key={index}
+                position={item.position}
+                company={item.company}
+                time={item.time}
+                work={item.work}
+                companyLink={item.companyLink}
+                address={item.address}
+              />
+            ))
+          }
         </ul>
       </div>
     </div>

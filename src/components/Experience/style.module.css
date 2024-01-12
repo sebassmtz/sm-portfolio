@@ -1,6 +1,6 @@
 .container {
-  margin-top: 8rem /* 256px */;
-  margin-bottom: 8rem /* 256px */;
+  margin-top: 4rem /* 256px */;
+  margin-bottom: 4rem /* 256px */;
 }
 
 .title {
@@ -24,7 +24,7 @@
   left: 93px;
   top: 9%;
   width: 4px;
-  height: 115%;
+  height: 90%;
   background-color: var(--primary);
   transform-origin: top;
 }
@@ -62,14 +62,19 @@
 
 /* sm */
 @media screen and (max-width: 639px) {
+  .container {
+    margin-top: 2rem /* 256px */;
+    margin-bottom: 2rem /* 256px */;
+  }
   .title {
+    margin-bottom: 2rem /* 256px */;
     font-size: 2.25rem /* 36px */;
     line-height: 2.5rem /* 40px */;
   }
   .lineMotion{
     width: 2px;
     left: 20px;
-    height: 100%;
+    height: 95%;
   }
 }
 
@@ -79,6 +84,6 @@
     width: 2px;
     top: 35px;
     left: 56px;
-    height: 100%;
+    height: 95%;
   }
 }
