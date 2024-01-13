@@ -9,6 +9,7 @@ import Image from "next/image";
 import styles from "./style.module.css";
 import TransitionEffect from "@/components/TransitionEffect/TransitionEffect";
 import ParticlesContainer from "@/components/ParticlesContainer/ParticlesContainer";
+import Form from "./Form";
 type Props = {
   params: { locale: string };
 };
@@ -19,6 +20,9 @@ function Contact({ params: { locale } }: Props) {
   if (!isValidLocale) notFound();
   // Enable static rendering
   unstable_setRequestLocale(locale);
+
+  // const t = useTranslations("Contact");
+
   return (
     <main className={styles.container}>
       <TransitionEffect />
@@ -33,16 +37,12 @@ function Contact({ params: { locale } }: Props) {
             alt="Spaceman"
           />
         </div>
+        <h1 className={styles.bigTtitle}>
+            Contact
+          </h1>
         <div className={styles.contact}>
-          Im a front-end developer located in India. I love to create simple yet
-          beautiful websites with great user experience.
-          <br /> <br />
-          Im interested in the whole frontend stack Like trying new things and
-          building great projects. Im an independent freelancer and blogger. I
-          love to write blogs and read books.
-          <br /> <br />I believe everything is an Art when you put your
-          consciousness in it. You can connect with me via social links.
-        </div>
+          <Form/>
+          </div>
       </div>
     </main>
   );

@@ -1,32 +1,41 @@
 .container {
   width: auto;
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  color: var(--text);
-  padding: 4rem;
-  padding-top: 10px;
+  align-items: center;
+  margin: 0 auto;
 }
 
-.test{
+.test {
   display: flex;
   flex-direction: column;
   position: absolute;
 }
-
 
 .spaceman {
   position: absolute;
-  top: 10%;
-  right: 5%;
+  top: 5%;
+  right: 10%;
   width: 20vw;
   animation: float 3s ease-in-out infinite;
 }
 
 .image {
-  width: 100%;
+  width: 90%;
   height: auto;
+}
+
+.bigTtitle {
+  text-transform: uppercase;
+  position: fixed;
+  color: rgba(var(--text),0,1);
+  font-size: 4rem;
+  z-index: 0;
+  top: 10%;
+  left: 15%;
 }
 
 @keyframes float {
@@ -42,19 +51,105 @@
 }
 
 .contact {
-  border: 2px solid var(--background-secondary);
+  border: 1px solid var(--background-secondary);
+  border-radius: 5px;
+  backdrop-filter: blur(4px);
   color: var(--text);
   padding: 2rem;
-  width: 50vw;
-  height: 60vw;
-  z-index: 3;
-  line-height: 1.5;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.form {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.input {
+  padding: 20px;
+  background-color: var(--background-soft);
+  border: none;
+  border-radius: 5px;
+}
+
+.input::placeholder {
+  color: var(--text-soft);
+}
+
+.recaptcha{
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: calc(0.6rem + 1vw);
-  backdrop-filter: blur(4px);
-  left: calc(5rem + 5vw);
-  top: 10rem;
-  font-style: italic;
+}
+
+.error{
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.label{
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: -0.6rem;
+}
+
+.textarea {
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--background-soft);
+  color: var(--text);
+  resize: none;
+}
+
+.textarea::placeholder {
+  color: var(--text-soft);
+}
+
+.button {
+  font-size: 20px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+
+/* xl */
+@media screen and (max-width: 1270px) {
+}
+
+/* lg */
+@media screen and (max-width: 1023px) {
+}
+
+/* md */
+@media screen and (max-width: 767px) {
+}
+
+/* sm */
+@media screen and (max-width: 639px) {
+}
+
+/* xs */
+@media screen and (max-width: 479px) {
 }
