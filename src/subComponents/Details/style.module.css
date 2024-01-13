@@ -57,7 +57,7 @@
 /* md */
 @media screen and (max-width: 767px) {
   .paragraph{
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.25rem/* 20px */;
   }
   .tag{
@@ -68,7 +68,7 @@
 /* sm */
 @media screen and (max-width: 639px) {
   .timeSpan{
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.25rem/* 20px */;
   }
 }

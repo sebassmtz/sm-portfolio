@@ -1,12 +1,15 @@
 [data-theme="dark"] {
   --background: #1b1b1b;
   --background-secondary: #f5f5f5;
+  --background-soft: rgb(245 245 245 / 0.4);
 
   --primary: #58e6d9;
   --text: #f5f5f5;
   --text-secondary: #1b1b1b;
 
   --border-color: #4a5568;
+
+  --input: rgb(245 245 245 / 0.4);
 
   --mobile: rgb(245 245 245 / 0.75);
   --text-soft: rgb(245 245 245 / 0.75);
@@ -15,6 +18,8 @@
 [data-theme="light"] {
   --background: #f5f5f5;
   --background-secondary: #1b1b1b;
+  --background-soft: rgb(27 27 27 / 0.4);
+  --input: #dadde2;
   --primary: #b63e96;
   --text: #1b1b1b;
   --text-secondary: #f5f5f5;
@@ -51,8 +56,7 @@
 @media screen and (max-width: 479px) {
 }
 
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;525;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;525;800&display=swap");
 
 /* Establece Montserrat como la fuente predeterminada */
 
