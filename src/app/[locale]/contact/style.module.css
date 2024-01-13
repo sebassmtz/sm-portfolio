@@ -34,8 +34,9 @@
   color: rgba(var(--text),0,1);
   font-size: 4rem;
   z-index: 0;
-  top: 10%;
-  left: 15%;
+  top: 5%;
+  left: 25%;
+  font-style: italic;
 }
 
 @keyframes float {
@@ -80,7 +81,7 @@
 
 .input {
   padding: 20px;
-  background-color: var(--background-soft);
+  background-color: var(--input);
   border: none;
   border-radius: 5px;
 }
@@ -113,7 +114,7 @@
   padding: 20px;
   border: none;
   border-radius: 5px;
-  background-color: var(--background-soft);
+  background-color: var(--input);
   color: var(--text);
   resize: none;
 }
@@ -133,6 +134,12 @@
   padding: 20px;
 }
 
+.sucess{
+  color: var(--primary);
+  font-size: 1.2rem;
+  text-align: center;
+}
+
 
 /* xl */
 @media screen and (max-width: 1270px) {
@@ -140,16 +147,70 @@
 
 /* lg */
 @media screen and (max-width: 1023px) {
+  .spaceman{
+    top: 2%;
+    right: 3%;
+  }
+  .bigTtitle{
+    font-size: 4.5rem;
+    top:2%;
+    left: 10%;
+  }
 }
 
 /* md */
 @media screen and (max-width: 767px) {
+  .spaceman{
+    top: 5%;
+    right: 5%;
+  }
+  .bigTtitle{
+    font-size: 3.5rem;
+    top:3%;
+    left: 10%;
+  }
+  .form {
+    width: 100%; /* Haz que el formulario ocupe el ancho completo */
+    padding: 20px; /* Agrega algún espacio interno para mejorar la legibilidad */
+  }
+
+  .label {
+    font-size: 1rem; /* Reduzca el tamaño de la fuente de las etiquetas */
+  }
+
+  .input,
+  .textarea {
+    padding: 15px; /* Reduce el espacio interno de los campos de entrada */
+  }
+
+  .button {
+    font-size: 18px; /* Reduzca el tamaño de la fuente del botón */
+    padding: 15px; /* Reduce el espacio interno del botón */
+  }
 }
 
 /* sm */
 @media screen and (max-width: 639px) {
+
 }
 
 /* xs */
 @media screen and (max-width: 479px) {
+  .bigTtitle{
+    font-size: 2.5rem;
+    top:5%;
+    left: 5%;
+  }
+  .container {
+    padding-left: 15px;
+  }
+  .contact{
+    width: 80%;
+    max-width: 400px;
+  }
+  .form {
+    width: 90%; /* Reduzca el ancho del formulario en dispositivos xs */
+    max-width: 400px;
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+  }
 }

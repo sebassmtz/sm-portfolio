@@ -5,10 +5,20 @@ import emailjs from "@emailjs/browser";
 import styles from "./style.module.css";
 import ReCAPTCHA from "react-google-recaptcha";
 
-function Form() {
+type Props = {
+  name: string;
+  placeholderName: string;
+  email: string;
+  placeholderEmail: string;
+  message: string;
+  placeholderMessage: string;
+  buttonSend: string;
+  messageError: string;
+  sendSucess: string;
+}
+function Form({name, placeholderName, email, placeholderEmail, message, placeholderMessage, sendSucess, messageError, buttonSend}: Props) {
   const ref = useRef<HTMLFormElement>(null);
   const captcha = useRef<ReCAPTCHA>(null);
-
   const [sucess, setSucess] = useState(false);
   const [captchaValido, setCaptchaValido] = useState(true);
 
@@ -31,7 +41,6 @@ function Form() {
 
     if (captcha.current.getValue()) {
       console.log("Mensaje Enviado");
-      setCaptchaValido(true);
       try {
         const result = await emailjs.sendForm(
           serviceId,
@@ -40,6 +49,7 @@ function Form() {
           publicKey
         );
         console.log(result.text);
+        setCaptchaValido(true);
         setSucess(true);
       } catch (error) {
         console.error(error);
@@ -68,26 +78,26 @@ function Form() {
       onSubmit={handleSubmit}
       className={styles.form}
     >
-      <label className={styles.label}>Name:</label>
+      <label className={styles.label}>{name}</label>
       <input
         type="text"
         name="name"
-        placeholder="Name"
+        placeholder={placeholderName}
         required
         className={styles.input}
       />
-      <label className={styles.label}>Email:</label>
+      <label className={styles.label}>{email}</label>
       <input
         type="email"
         name="email"
-        placeholder="Email"
+        placeholder={placeholderEmail}
         required
         className={styles.input}
       />
-      <label className={styles.label}>Message:</label>
+      <label className={styles.label}>{message}</label>
       <textarea
         name="message"
-        placeholder="Message"
+        placeholder={placeholderMessage}
         rows={8}
         required
         className={styles.textarea}
@@ -99,15 +109,15 @@ function Form() {
         onChange={onChange}
       />
       {captchaValido === false && (
-        <div className={styles.error}>Por favor rellena el ReCAPTCHA</div>
+        <div className={styles.error}>{messageError}</div>
       )}
       <button
         type="submit"
         className={styles.button}
       >
-        Send
+        {buttonSend}
       </button>
-      {sucess && <p className={styles.sucess}>Message sent successfully</p>}
+      {sucess && <p className={styles.sucess}>{sendSucess}</p>}
     </form>
   );
 }

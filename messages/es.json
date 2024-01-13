@@ -67,6 +67,20 @@
     "project_3_type": "Deep Learning",
     "project_3_skills": "Python - Keras - Tensorflow - Flask - CNN - React - Javascript"
   },
+  "ContactPage": {
+    "title": "Contacto",
+    "form": {
+      "name": "Nombre",
+      "placeholder_name": "Ingresa tu nombre",
+      "email": "Correo",
+      "placeholder_email": "Ingresa tu correo",
+      "message": "Mensaje",
+      "placeholder_message": "Ingresa tu mensaje",
+      "send": "Enviar"
+    },
+    "sendSucess": "Mensaje enviado con exito",
+    "sendError": "Por favor rellena el ReCAPTCHA"
+  },
   "FooterPage": {
     "rights": "Todos los derechos reservados",
     "madeWith": "Hecho con",

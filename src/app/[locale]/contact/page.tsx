@@ -21,7 +21,7 @@ function Contact({ params: { locale } }: Props) {
   // Enable static rendering
   unstable_setRequestLocale(locale);
 
-  // const t = useTranslations("Contact");
+  const t = useTranslations("ContactPage");
 
   return (
     <main className={styles.container}>
@@ -37,12 +37,20 @@ function Contact({ params: { locale } }: Props) {
             alt="Spaceman"
           />
         </div>
-        <h1 className={styles.bigTtitle}>
-            Contact
-          </h1>
+        <h1 className={styles.bigTtitle}>{t("title")}</h1>
         <div className={styles.contact}>
-          <Form/>
-          </div>
+          <Form
+            name={t("form.name")}
+            placeholderName={t("form.placeholder_name")}
+            email={t("form.email")}
+            placeholderEmail={t("form.placeholder_email")}
+            message={t("form.message")}
+            placeholderMessage={t("form.placeholder_message")}
+            buttonSend={t("form.send")}
+            messageError={t("sendError")}
+            sendSucess={t("sendSucess")}
+          />
+        </div>
       </div>
     </main>
   );
