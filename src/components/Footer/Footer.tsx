@@ -31,12 +31,7 @@ function Footer() {
           href="/"
           className={styles.link}
         >
-          <Image
-          className={styles.logo}
-            src={logo}
-            alt="Logo"
-          />
-          {/* {t("brand")} */}
+          {t("brand")}
         </Link>
       </div>
     </footer>
