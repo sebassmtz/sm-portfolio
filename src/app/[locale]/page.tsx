@@ -8,7 +8,7 @@ import Image from "next/image";
 
 import styles from "./style.module.css";
 
-import profilePic from "../../../public/images/profile/developer-pic-1.png";
+import profilePic from "../../../public/images/profile/Avatar.png";
 
 import AnimatedText from "@/subComponents/AnimatedText/AnimatedText";
 
@@ -44,10 +44,10 @@ export default function IndexPage({ params: { locale } }: Props) {
           <div className={styles.containerImage}>
             <Image
               className={styles.image}
+              width={300} // Ajusta el ancho según tus necesidades
+              height={400} // Ajusta la altura según tus necesidades
               priority
               src={profilePic}
-              width={580}
-              height={500}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
               alt="Picture of the portfolio developer"
             />

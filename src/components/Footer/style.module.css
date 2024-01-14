@@ -41,6 +41,14 @@
   color: var(--primary);
 }
 
+.logo{
+  width: 250px;
+  height: auto;
+  position: absolute;
+  bottom: -27%;
+  right: 0;
+}
+
 /* lg */
 @media screen and (max-width: 1023px) {
   .container {
@@ -60,12 +68,18 @@
   .layout {
     padding: 6rem;
   }
+  .logo{
+    display: none;
+  }
 }
 
 /* lg */
 @media screen and (max-width: 1023px) {
   .layout {
     padding: 4rem;
+  }
+  .logo{
+    display: none;
   }
 }
 

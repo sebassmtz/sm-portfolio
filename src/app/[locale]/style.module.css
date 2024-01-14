@@ -23,12 +23,21 @@
 }
 
 .containerImage {
-  width: 50%;
+  width: 100%;
+  height: max-content;
+  max-width: 500px;
+  border-radius: 1rem /* 16px */;
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--background-secondary);
+  background-color: var(--background);
+  padding: 1rem;
 }
 
 .image {
-  width: 90%;
+  width: 100%;
   height: auto;
+  border-radius: 1rem;
 }
 
 .containerText {
@@ -37,6 +46,7 @@
   flex-direction: column;
   align-items: center;
   align-self: center;
+  padding: 2rem;
 }
 
 .par {
@@ -198,7 +208,12 @@
 
 /* sm */
 @media screen and (max-width: 639px) {
+  .containerImage{
+    padding: 0;
+    border: none;
+  }
   .animatedText {
+    padding-top: 1rem;
     font-size: 1.875rem /* 30px */ !important;
     line-height: 2.25rem /* 36px */ !important;
   }

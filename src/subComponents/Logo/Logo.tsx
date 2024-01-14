@@ -5,6 +5,10 @@ import { motion } from "framer-motion";
 
 import styles from "./style.module.css";
 
+import Image from "next/image";
+
+
+
 function Logo() {
   return (
     <motion.div

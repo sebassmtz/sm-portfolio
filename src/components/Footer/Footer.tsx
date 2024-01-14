@@ -2,6 +2,9 @@ import Link from "next/link";
 import styles from "./style.module.css";
 import { useTranslations } from "next-intl";
 
+import logo from "../../../public/images/profile/logo.png"
+import Image from "next/image";
+
 function Footer() {
   const t = useTranslations("FooterPage");
   return (
@@ -28,7 +31,12 @@ function Footer() {
           href="/"
           className={styles.link}
         >
-          {t("brand")}
+          <Image
+          className={styles.logo}
+            src={logo}
+            alt="Logo"
+          />
+          {/* {t("brand")} */}
         </Link>
       </div>
     </footer>
