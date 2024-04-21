@@ -19,6 +19,7 @@ import { LinkArrow, YinYang } from "@/subComponents/Icons/Icons";
 import HireMe from "@/subComponents/HireMe/HireMe";
 import TransitionEffect from "@/components/TransitionEffect/TransitionEffect";
 import CustomLink from "@/components/Navigation/NavigationLink/CustomLink";
+import Gemini from "@/components/Gemini/Gemini";
 
 type Props = {
   params: { locale: string };
@@ -57,7 +58,10 @@ export default function IndexPage({ params: { locale } }: Props) {
               text={t("title")}
               className={styles.animatedText}
             />
-            <p className={styles.par}>{t("description")}</p>
+            {/* <p className={styles.par}>{t("description")}</p> */}
+            <div className={styles.gemini}>
+              <Gemini />
+            </div>
             <div className={styles.contacts}>
               <Link
                 href={` ${
@@ -81,9 +85,10 @@ export default function IndexPage({ params: { locale } }: Props) {
           </div>
         </div>
       </PageLayout>
+
       <HireMe title={t("hireMe")} />
       <div className={styles.yinYan}>
-        <YinYang className={styles.moveYin} />
+        {/* <YinYang className={styles.moveYin} /> */}
       </div>
     </main>
   );

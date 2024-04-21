@@ -1,0 +1,80 @@
+.section {
+  width: auto;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+.article {
+  display: grid;
+  width: 100%;
+  gap: 1rem;
+  max-height: 320px;
+  overflow-y: auto;
+  align-items: start;
+}
+
+.flex {
+  display: flex;
+}
+
+.message {
+  width: fit-content;
+  font-weight: 500;
+  max-width: 80%;
+  color: var(--text-secondary);
+  border-radius: 3rem;
+  background-color: var(--background-secondary);
+  padding: 1rem;
+  border-bottom-left-radius: 0;
+}
+
+.bot {
+  margin-left: auto;
+  background-color: #3182ce;
+  border-radius: 3rem;
+  border-bottom-right-radius: 0;
+  text-align: right;
+}
+
+.input {
+  flex: 1;
+  padding: 0.75rem;
+  background-color: var(--background-soft);
+  color: var(--text);
+  border-radius: 0.5rem;
+  line-height: 2.5rem;
+  border-width: 2px;
+  border-style: solid;
+  border-color: transparent;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.button {
+  align-items: center;
+  background-color: var(--background-secondary);
+  color: var(--text-secondary);
+  line-height: 2.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 18px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: transparent;
+  text-decoration: none;
+  margin-top: 0.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.button:hover {
+  background-color: var(--background);
+  color: var(--text);
+  border-color: var(--background-secondary);
+}
+
+.button:disabled{
+  background-color: var(--background-secondary);
+  opacity: 0.8;
+}
