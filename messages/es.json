@@ -13,7 +13,11 @@
     "description": "Soy un desarrollador especializado en convertir ideas en aplicaciones web innovadoras. Descubre mi portafolio para explorar mi experiencia y proyectos más recientes.",
     "resume": "Resumen",
     "contact": "Contacto",
-    "hireMe": "Contrata"
+    "hireMe": "Contrata",
+    "questionBot": "¡Hola! Soy un bot que puede responder cualquier pregunta que tengas sobre Sebastián Martínez. ¿Qué te gustaría saber?",
+    "questionUser": "Pregúntame lo que sea",
+    "sendButton": "Enviar",
+    "sendingButton": "Enviando..."
   },
   "AboutPage": {
     "title": "Sobre Mi",

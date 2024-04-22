@@ -45,6 +45,16 @@ function Projects({ params: { locale } }: Props) {
         />
         <div className={styles.containerProjects}>
           {/* Projects */}
+          {/* <FeaturedProject
+            title={t("project_1_title")}
+            img={project1}
+            link="https://frontend-stockpro.vercel.app/"
+            github="https://github.com/sebassmtz/frontend-stockpro"
+            type={t("project_1_type")}
+            summary={t("project_1_summary")}
+            visit={t("visit")}
+            skills={t("project_1_skills")}
+          /> */}
           <FeaturedProject
             title={t("project_1_title")}
             img={project1}
