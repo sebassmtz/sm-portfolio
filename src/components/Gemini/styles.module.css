@@ -6,7 +6,7 @@
 
 .article {
   display: grid;
-  width: 100%;
+  width: auto;
   gap: 1rem;
   max-height: 320px;
   overflow-y: auto;
@@ -26,6 +26,7 @@
   background-color: var(--background-secondary);
   padding: 1rem;
   border-bottom-left-radius: 0;
+  font-size: 16px;
 }
 
 .bot {
@@ -34,6 +35,7 @@
   border-radius: 3rem;
   border-bottom-right-radius: 0;
   text-align: right;
+  font-size: 16px;
 }
 
 .input {
@@ -76,5 +78,33 @@
 
 .button:disabled {
   background-color: var(--background-secondary);
+  color: var(--text-secondary);
   opacity: 0.8;
+}
+
+
+/* sm */
+@media screen and (max-width: 639px) {
+  .section {
+    grid-template-columns: 1fr;
+    width: auto;
+  }
+  .button {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .button {
+    font-size: 11px;
+  }
+  .bot {
+    font-size: 12px;
+  }
+  .message {
+    font-size: 12px;
+  }
+  .input {
+    font-size: 12px;
+  }
 }

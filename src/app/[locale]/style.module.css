@@ -46,7 +46,8 @@
   flex-direction: column;
   align-items: center;
   align-self: center;
-  padding: 2rem;
+  /* padding: 2rem; */
+  margin-left: 1.5rem;
 }
 
 .par {
@@ -59,7 +60,7 @@
 
 .gemini {
   gap: 1rem;
-  width: 100%;
+  width: auto;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -233,4 +234,8 @@
 
 /* xs */
 @media screen and (max-width: 479px) {
+  .containerImage {
+    padding: 0;
+    border: none;
+  }
 }
