@@ -59,14 +59,14 @@ export default function IndexPage({ params: { locale } }: Props) {
               className={styles.animatedText}
             />
             {/* <p className={styles.par}>{t("description")}</p> */}
-            {/* <div className={styles.gemini}>
+            <div className={styles.gemini}>
               <Gemini
               questionBot={t("questionBot")}
               questionUser={t("questionUser")}
               sendButton={t("sendButton")}
               sendingButton={t("sendingButton")}
               />
-            </div> */}
+            </div>
             <div className={styles.contacts}>
               <Link
                 href={` ${
