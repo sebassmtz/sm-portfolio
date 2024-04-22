@@ -60,7 +60,12 @@ export default function IndexPage({ params: { locale } }: Props) {
             />
             {/* <p className={styles.par}>{t("description")}</p> */}
             <div className={styles.gemini}>
-              <Gemini />
+              <Gemini
+              questionBot={t("questionBot")}
+              questionUser={t("questionUser")}
+              sendButton={t("sendButton")}
+              sendingButton={t("sendingButton")}
+              />
             </div>
             <div className={styles.contacts}>
               <Link

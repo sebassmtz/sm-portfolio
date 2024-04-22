@@ -4,6 +4,7 @@ import { useState } from "react";
 import { sendQuestion } from "./actions";
 
 import styles from "./styles.module.css";
+import { lockfilePatchPromise } from "next/dist/build/swc";
 
 interface Message {
   id: string;
@@ -11,34 +12,51 @@ interface Message {
   owner: "user" | "bot";
 }
 
-function Gemini() {
+type Props = {
+  questionBot: string;
+  questionUser: string;
+  sendButton: string;
+  sendingButton: string;
+};
+
+function Gemini({
+  questionBot,
+  questionUser,
+  sendButton,
+  sendingButton,
+}: Props) {
   const [message, setMessage] = useState<Message[]>([
     {
       id: "0",
-      text: "Ask me anything about Sebastian Martinez!",
+      text: questionBot,
       owner: "bot",
     },
     {
       id: "1",
-      text: "I'm a bot, so I can't answer everything, but I'll do my best!",
+      text: questionUser,
       owner: "user",
-    }
+    },
   ]);
 
   const [isLoading, setIsLoading] = useState(false);
 
-  async function handleSubmit(event: React.ChangeEvent<HTMLFormElement>) {
+  const [question, setQuestion] = useState(" ");
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setQuestion(event.target.value);
+  };
+
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setIsLoading(true);
-    const formData = new FormData(event.currentTarget);
     setMessage((messages) =>
       messages.concat({
         id: Math.random().toString(36).slice(2),
-        text: formData.get("question") as string,
+        text: question,
         owner: "user",
       })
     );
-    const answer = await sendQuestion(formData.get("question") as string);
+    const answer = await sendQuestion(question);
     setMessage((messages) =>
       messages.concat({
         id: Math.random().toString(36).slice(2),
@@ -47,6 +65,7 @@ function Gemini() {
       })
     );
     setIsLoading(false);
+    setQuestion("");
   }
 
   return (
@@ -71,6 +90,8 @@ function Gemini() {
         <input
           className={styles.input}
           name="question"
+          value={question}
+          onChange={handleChange}
           type="text"
         />
         <button
@@ -78,7 +99,7 @@ function Gemini() {
           className={styles.button}
           disabled={isLoading}
         >
-          {isLoading ? "Sending..." : "Send"}
+          {isLoading ? sendingButton : sendButton}
         </button>
       </form>
     </section>

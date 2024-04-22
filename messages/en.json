@@ -13,7 +13,11 @@
     "description": "I am a developer specialized in turning ideas into innovative web applications. Discover my portfolio to explore my experience and most recent projects.",
     "resume": "Resume",
     "contact": "Contact",
-    "hireMe": "Hire Me"
+    "hireMe": "Hire Me",
+    "questionBot": "Hi! I'm a bot that can answer any questions you have about Sebastian Martinez. What would you like to know?",
+    "questionUser": "Ask me anything",
+    "sendButton": "Send",
+    "sendingButton": "Sending..."
   },
   "AboutPage": {
     "title": "About Me",
