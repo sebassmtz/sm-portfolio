@@ -1,6 +1,7 @@
+"use server";
 export async function sendQuestion(question: string) {
   const answer = await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.0-pro:generateContent?key=${process.env.GEMINI_API_KEY} `,
+    `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.0-pro:generateContent?key=${process.env.GEMINI_API_KEY}`,
     {
       method: "POST",
       headers: {
@@ -50,6 +51,10 @@ export async function sendQuestion(question: string) {
           candidates: { content: { parts: { text: string }[] } }[];
         }>
     )
-    .then((res) => res.candidates[0].content.parts[0].text);
+    .then((res) => res.candidates[0].content.parts[0].text)
+    .catch((err) => {
+      console.error(err);
+      return "I'm sorry, I'm not able to answer that question right now.";
+    });
   return answer;
 }
