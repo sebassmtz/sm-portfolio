@@ -1,5 +1,3 @@
-"use server";
-
 export async function sendQuestion(question: string) {
   const answer = await fetch(
     `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.0-pro:generateContent?key=${process.env.GEMINI_API_KEY} `,

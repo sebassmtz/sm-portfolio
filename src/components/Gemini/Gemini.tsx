@@ -4,7 +4,6 @@ import { useState } from "react";
 import { sendQuestion } from "./actions";
 
 import styles from "./styles.module.css";
-import { lockfilePatchPromise } from "next/dist/build/swc";
 
 interface Message {
   id: string;
