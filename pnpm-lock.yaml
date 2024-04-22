@@ -11,9 +11,6 @@ importers:
       '@emailjs/browser':
         specifier: ^3.12.1
         version: 3.12.1
-      '@google/generative-ai':
-        specifier: ^0.7.1
-        version: 0.7.1
       '@react-three/drei':
         specifier: ^9.93.0
         version: 9.93.0(@react-three/fiber@8.15.14(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(three@0.160.0))(@types/three@0.160.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(three@0.160.0)
@@ -152,10 +149,6 @@ packages:
 
   '@formatjs/intl-localematcher@0.5.2':
     resolution: {integrity: sha512-txaaE2fiBMagLrR4jYhxzFO6wEdEG4TPMqrzBAcbr4HFUYzH/YC+lg6OIzKCHm8WgDdyQevxbAAV1OgcXctuGw==}
-
-  '@google/generative-ai@0.7.1':
-    resolution: {integrity: sha512-WTjMLLYL/xfA5BW6xAycRPiAX7FNHKAxrid/ayqC1QMam0KAK0NbMeS9Lubw80gVg5xFMLE+H7pw4wdNzTOlxw==}
-    engines: {node: '>=18.0.0'}
 
   '@humanwhocodes/config-array@0.11.13':
     resolution: {integrity: sha512-JSBDMiDKSzQVngfRjOdFXgFfklaXI4K9nLF49Auh21lmBWRLIK3+xTErTWD4KU54pb6coM6ESE7Awz/FNU3zgQ==}
@@ -1955,8 +1948,6 @@ snapshots:
   '@formatjs/intl-localematcher@0.5.2':
     dependencies:
       tslib: 2.6.2
-
-  '@google/generative-ai@0.7.1': {}
 
   '@humanwhocodes/config-array@0.11.13':
     dependencies:
