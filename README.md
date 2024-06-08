@@ -1,4 +1,5 @@
-# Next.js Template
+# Portfolio
+
 
 This repository serves as a basic template to kickstart projects using Next.js.
 
